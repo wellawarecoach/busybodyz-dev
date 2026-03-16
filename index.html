@@ -5,33 +5,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="BusyBodyz Energy & Performance Coaching. Restore your energy, increase capacity, and build sustainable strength for work, life, and longevity." />
+        content="BusyBodyz Performance Energy Coaching for professionals 40–60. Strength training, breathing mechanics, and nervous system resets to restore usable energy and build lasting capacity." />
     <meta name="keywords"
-        content="energy coaching, performance coaching for professionals, nervous system reset, strength and longevity coaching" />
-    <title>BusyBodyz | Restore Your Energy</title>
+        content="performance energy coaching, energy coaching, strength training, breathing mechanics, nervous system resets, capacity training, longevity coaching" />
+    <title>BusyBodyz | Performance Energy Coaching</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-slate-800 antialiased">
 
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-slate-200/70 z-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center gap-4">
             <a href="index.html" class="block">
                 <div class="text-xl font-semibold tracking-tight text-slate-900">BusyBodyz</div>
                 <div class="text-xs text-neutral-500 mt-1">Performance Energy Coaching</div>
             </a>
 
-            <nav class="hidden md:flex gap-8 text-sm text-slate-800">
-                <a href="#section-how-it-works" class="hover:text-blue-900">Method</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm text-slate-800">
+                <a href="#method" class="hover:text-blue-900">Method</a>
                 <a href="#services" class="hover:text-blue-900">Services</a>
-                <a href="#reset" class="hover:text-blue-900">Reset</a>
+                <a href="#results" class="hover:text-blue-900">Outcomes</a>
                 <a href="#contact" class="hover:text-blue-900">Contact</a>
+                <a href="about.html" class="hover:text-slate-900">About</a>
             </nav>
 
-            <a href="#reset" class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
+            <div class="hidden md:flex items-center gap-3">
+                <a href="resets.html#reset"
+                    class="border border-slate-300 bg-white text-slate-900 px-4 py-2 rounded-md text-sm hover:bg-slate-50 transition">
+                    Start Your 7-Day Energy Reset
+                </a>
+                <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                    class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
+                    Book Your Energy Consult
+                </a>
+            </div>
+
+            <!-- Mobile CTA -->
+            <a href="resets.html#reset"
+                class="md:hidden bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
                 Start Here
             </a>
         </div>
@@ -41,397 +61,602 @@
     <div class="pt-24"></div>
 
     <!-- HERO -->
-    <section class="py-24 fade-in">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+    <section class="py-20 md:py-24 fade-in">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div
                 class="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-10 md:p-14 shadow-sm">
-                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6 text-slate-900">
-                    Strong body.<br />Clear mind. Usable energy — every day.
-                </h1>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium text-slate-700">
+                        Strength • Breathing Mechanics • Nervous System Resets
+                    </p>
 
-                <p class="text-lg text-neutral-600 max-w-2xl mx-auto mb-10">
-                    Train with intent. Recover intelligently.
-                    Use simple, strategic Resets on your own to reduce tension and restore your system between sessions.
+                    <h1 class="mt-6 text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-slate-900">
+                        Strong body.<br />Clear mind.<br class="hidden sm:block" />Usable energy for work and life.
+                    </h1>
 
-                    Build performance that doesn’t burn you out.
-                </p>
+                    <p class="mt-5 text-lg text-neutral-600 max-w-2xl mx-auto">
+                        Coaching for professionals 40–60 who want to feel capable again — without grinding harder.
+                    </p>
 
-                <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <a href="#reset" class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                        Get 2-Week Reset Access
-                    </a>
-                    <a href="#contact"
-                        class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition">
-                        Explore Coaching Options
-                    </a>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                            class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
+                            Book Your Free Energy Consult
+                        </a>
+                        <a href="resets.html#reset"
+                            class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition">
+                            Start Your 7-Day Energy Reset
+                        </a>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                            <div class="font-semibold text-slate-900">Less bracing</div>
+                            <div class="mt-1 text-sm text-slate-600">Reduce residual tension that “won’t stretch out.”
+                            </div>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                            <div class="font-semibold text-slate-900">Better breathing</div>
+                            <div class="mt-1 text-sm text-slate-600">Restore ribcage + diaphragm mechanics under stress.
+                            </div>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                            <div class="font-semibold text-slate-900">More capacity</div>
+                            <div class="mt-1 text-sm text-slate-600">Build strength that transfers to real life.</div>
+                        </div>
+                    </div>
+
+                    <p class="mt-6 text-xs text-slate-500">
+                        Educational coaching only. Not medical care. If symptoms persist, consult a licensed clinician.
+                    </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <h2 class="text-3xl font-semibold text-slate-900">
+                Designed for busy professionals
+            </h2>
+
+            <p class="mt-4 text-neutral-600 max-w-2xl mx-auto">
+                Most BusyBodyz clients are experienced professionals who want to stay capable,
+                strong, and energized without burning themselves out.
+            </p>
+
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+
+                <div class="rounded-xl border border-slate-200 p-6 bg-white">
+                    <h3 class="font-semibold text-slate-900">High-responsibility careers</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        Doctors, teachers, executives, therapists, accountants, and business owners.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 p-6 bg-white">
+                    <h3 class="font-semibold text-slate-900">Active but fatigued</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        You train or stay active, but energy and recovery aren't what they used to be.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 p-6 bg-white">
+                    <h3 class="font-semibold text-slate-900">Want sustainable performance</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        You want strength, resilience, and energy that supports work, life, and longevity.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- PROBLEM -->
-    <section class="py-20 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-semibold tracking-tight mb-8 text-slate-900">
-                You're Not Out of Shape. You're Out of Capacity.
-            </h2>
-
-            <ul class="text-slate-800 space-y-4 text-lg">
-                <li>You're not lazy.</li>
-                <li>You're overloaded.</li>
-                <li>• Residual tension that never fully leaves.</li>
-                <li>• Sleep that doesn't restore.</li>
-                <li>• Fatigue despite training</li>
-                <li>• Brain fog under stress</li>
-                <li>• Recovery that feels slower than it should</li>
-            </ul>
-
-            <p class="mt-10 text-slate-700 font-medium">
-                Energy is a system issue — not a motivation issue.
-            </p>
-        </div>
-    </section>
-
-    <!-- WHAT IS A RESET -->
-    <section id="section-reset-overview" class="py-24 bg-slate-50 border-t border-slate-200 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-8 text-slate-900">What Is a Reset?</h2>
-
-            <div class="text-lg text-neutral-700 space-y-6 max-w-3xl mx-auto">
-                <p>
-                    A Reset is a short, focused sequence you perform on your own to reduce hidden tension, improve
-                    breathing mechanics, and restore how your body and nervous system work together.
-                </p>
-                <p class="font-medium text-slate-900">
-                    It's not a workout.<br />
-                    It's not stretching.<br />
-                    And it's not about doing more.
-                </p>
-                <p>
-                    It's about removing what's in the way.
-                </p>
-                <p>
-                    When tension drops and your system recalibrates, strength feels smoother, recovery improves, and
-                    energy becomes more usable throughout the day.
-                </p>
-                <p class="font-medium text-slate-900">
-                    You train to build capacity.<br />
-                    You Reset to protect and restore it.
+    <section class="py-16 md:py-20 fade-in">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                    You’re not out of shape. You’re out of capacity.
+                </h2>
+                <p class="mt-4 text-lg text-neutral-600">
+                    When your system is overloaded, “trying harder” stops working. Recovery slows. Tension accumulates.
+                    Energy becomes unreliable.
                 </p>
             </div>
-        </div>
-    </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="section-how-it-works" class="py-24 bg-slate-50 border-t border-slate-200 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-16 text-slate-900">How It Works</h2>
-
-            <div class="space-y-12 max-w-3xl mx-auto">
-                <!-- Step 1 -->
-                <div class="flex gap-4">
-                    <div
-                        class="flex-shrink-0 w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-semibold">
-                        1
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 text-slate-900">Assess & Align</h3>
-                        <p class="text-neutral-600">
-                            We start by identifying where tension, compensation, and energy leaks are limiting your
-                            performance.
-                            You'll understand what your body needs — not just what to push harder.
-                        </p>
-                    </div>
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="font-semibold text-slate-900">Residual tension</div>
+                    <p class="mt-2 text-neutral-600">Protective bracing that never fully leaves.</p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="flex gap-4">
-                    <div
-                        class="flex-shrink-0 w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-semibold">
-                        2
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 text-slate-900">Train With Purpose</h3>
-                        <p class="text-neutral-600">
-                            Strength and performance training is programmed to build real, usable capacity.
-                            Every session has intent. No random volume. No burnout cycles.
-                        </p>
-                    </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="font-semibold text-slate-900">Sleep that doesn’t restore</div>
+                    <p class="mt-2 text-neutral-600">You wake up “charged” but not recovered.</p>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="flex gap-4">
-                    <div
-                        class="flex-shrink-0 w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-semibold">
-                        3
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 text-slate-900">Reset & Restore</h3>
-                        <p class="text-neutral-600">
-                            Between sessions, you use short, strategic Resets on your own.
-                            These reduce unnecessary tension, improve recovery, and keep your energy high — so each
-                            workout builds on the last instead of digging a hole.
-                        </p>
-                    </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="font-semibold text-slate-900">Fatigue despite training</div>
+                    <p class="mt-2 text-neutral-600">Your effort is there — your output isn’t.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="font-semibold text-slate-900">Brain fog under stress</div>
+                    <p class="mt-2 text-neutral-600">Focus and clarity drop when pressure rises.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="font-semibold text-slate-900">Slower recovery</div>
+                    <p class="mt-2 text-neutral-600">Soreness, stiffness, and “drag” last longer.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                    <div class="font-semibold text-slate-900">Key idea</div>
+                    <p class="mt-2 text-neutral-700 font-medium">
+                        Energy is a system issue — not a motivation issue.
+                    </p>
                 </div>
             </div>
 
-            <!-- Result box -->
-            <div class="mt-16 rounded-2xl border border-slate-200 bg-white shadow-sm p-8 max-w-3xl mx-auto">
-                <h3 class="font-semibold text-xl mb-4 text-center text-slate-900">The Result</h3>
-                <div class="grid md:grid-cols-3 gap-6 text-center text-neutral-700">
-                    <div>
-                        <p class="font-medium">Stronger movement.</p>
-                    </div>
-                    <div>
-                        <p class="font-medium">Clearer thinking.</p>
-                    </div>
-                    <div>
-                        <p class="font-medium">More energy available for the people and activities that matter.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Studio and In-Home Coaching section -->
-    <section id="section-studio-home-coaching" class="py-24 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-8 text-slate-900">Studio & In-Home Coaching
-            </h2>
-            <p class="text-lg text-neutral-700 text-center max-w-2xl mx-auto mb-10">
-                Experience personalized guidance in our studio or in the comfort of your home. Restore energy, improve
-                mobility, and maximize daily performance with expert coaching designed around your needs.
-            </p>
-            <ul class="space-y-4 text-neutral-600 max-w-2xl mx-auto text-lg">
-                <li>Private 1:1 & Semi-Private 1:2 Studio Sessions</li>
-                <li>Small Group Studio Classes</li>
-                <li>In-Home Coaching Sessions</li>
-            </ul>
-            <div class="text-center mt-10">
-                <a href="studio-coaching.html"
-                    class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                    Book Your Session
+            <div class="mt-10 text-center">
+                <a href="#method" class="text-blue-900 font-medium hover:underline">
+                    See how we rebuild capacity →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Online Coaching section highlighting virtual and self-led programs -->
-    <section id="section-online-coaching" class="py-24 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-8 text-slate-900">Online Coaching</h2>
-            <p class="text-lg text-neutral-700 text-center max-w-2xl mx-auto mb-10">
-                Access personalized coaching from anywhere with our virtual programs. Follow self-led plans, join live
-                sessions, or get guidance online to restore energy and improve performance at your own pace.
-            </p>
-            <ul class="space-y-4 text-slate-900 max-w-2xl mx-auto text-lg">
-                <li>Self-Led Virtual Programs</li>
-                <li>Live Online Coaching Sessions</li>
-                <li>Personalized Online Plans</li>
-                <li>Guided Energy & Performance Resets</li>
-            </ul>
-            <div class="text-center mt-10">
-                <a href="online-coaching.html"
-                    class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                    Join Online Coaching
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- METHOD -->
+    <section id="method" class="py-20 md:py-24 bg-slate-50 border-t border-slate-200 fade-in">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="rounded-3xl border border-slate-200 bg-white shadow-sm p-10 md:p-14">
 
-    <!-- Performance Energy Difference section -->
-    <section id="section-performance-energy" class="py-24 bg-slate-50 border-t border-slate-200 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-8 text-slate-900">The Performance Energy
-                Difference</h2>
-
-            <div class="text-lg text-neutral-700 space-y-6 max-w-3xl mx-auto">
-                <p>
-                    Most programs focus on doing more: more reps, more intensity, more hours.
-                    We focus on doing smarter — building strength, restoring energy, and creating usable capacity that
-                    carries into real life.
-                </p>
-
-                <p>Here's what sets Performance Energy Coaching apart:</p>
-
-                <div class="space-y-4">
-                    <p class="font-medium text-slate-900">
-                        <span class="text-blue-900">●</span> <strong>Holistic Approach:</strong> We address tension,
-                        recovery, and energy systems — not just muscles.
+                <div class="max-w-3xl mx-auto text-center">
+                    <p
+                        class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold tracking-wide text-blue-900">
+                        METHOD
                     </p>
-                    <p class="font-medium text-slate-900">
-                        <span class="text-blue-900">●</span> <strong>Autonomy Built In:</strong> Strategic Resets
-                        empower you to restore energy and reduce tension on your own.
-                    </p>
-                    <p class="font-medium text-slate-900">
-                        <span class="text-blue-900">●</span> <strong>Sustainable Results:</strong> No burnout, no
-                        guessing, no "grind culture." You train hard when it matters and recover intelligently when it
-                        doesn't.
-                    </p>
-                    <p class="font-medium text-slate-900">
-                        <span class="text-blue-900">●</span> <strong>Real-Life Performance:</strong> Strength, clarity,
-                        and energy aren't just for workouts — they support the life you actually want to live.
+                    <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                        The BusyBodyz Method
+                    </h2>
+                    <p class="mt-4 text-lg text-neutral-600">
+                        Three pillars that work together: regulate the system, restore mechanics, then build strength
+                        that holds under
+                        life.
                     </p>
                 </div>
 
-                <p class="text-center italic text-neutral-700 pt-4">
-                    This isn't just fitness.<br />
-                    It's performance energy — the capacity to move, think, and live at your best, every day.
-                </p>
+                <div class="mt-14 grid md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-semibold text-xl text-slate-900">1) Reset</h3>
+                            <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">10–15
+                                min</span>
+                        </div>
+                        <p class="mt-4 text-neutral-600">
+                            Short sequences you do on your own to reduce hidden tension and downshift your nervous
+                            system.
+                        </p>
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Faster decompression</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Improved recovery signals</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> More usable daily energy</li>
+                        </ul>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-semibold text-xl text-slate-900">2) Breathe</h3>
+                            <span
+                                class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Mechanics</span>
+                        </div>
+                        <p class="mt-4 text-neutral-600">
+                            Breathing mechanics to restore ribcage mobility, diaphragm function, and posture under load.
+                        </p>
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Less neck/low-back takeover</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Better movement options</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Calmer baseline under stress
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-semibold text-xl text-slate-900">3) Strength</h3>
+                            <span
+                                class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Capacity-first</span>
+                        </div>
+                        <p class="mt-4 text-neutral-600">
+                            Progressive strength training designed to build durable output without burnout cycles.
+                        </p>
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Stronger tissues + joints</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Better stress tolerance</li>
+                            <li class="flex gap-2"><span class="text-blue-900">●</span> Performance that transfers to
+                                life</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-14 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                    <div class="grid md:grid-cols-3 gap-6 text-center text-neutral-700">
+                        <div>
+                            <p class="font-semibold text-slate-900">Stronger movement</p>
+                            <p class="mt-1">Less compensation, more control.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Clearer thinking</p>
+                            <p class="mt-1">Less overwhelm, faster downshift.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-900">More usable energy</p>
+                            <p class="mt-1">For the people and activities that matter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-3 text-sm text-slate-700">
+                        <span class="font-semibold text-slate-900">Your path:</span>
+                        <span class="rounded-full bg-slate-50 border border-slate-200 px-4 py-2">Reset</span>
+                        <span class="text-slate-400">→</span>
+                        <span class="rounded-full bg-slate-50 border border-slate-200 px-4 py-2">Restore
+                            Mechanics</span>
+                        <span class="text-slate-400">→</span>
+                        <span class="rounded-full bg-slate-50 border border-slate-200 px-4 py-2">Build Capacity</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <a href="resets.html#reset"
+                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-block">
+                        Start Your 7-Day Energy Reset
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- TARGET AUDIENCE -->
-    <section id="section-target-audience" class="py-24 fade-in">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-8 text-slate-900">Who This Is For</h2>
-            <div class="text-lg text-neutral-700 space-y-6 max-w-3xl mx-auto">
-                <p class="text-center">
-                    This is for adults who want to feel strong, capable, and energized — not just fit.
+    <!-- TRUST -->
+    <section class="py-14 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="rounded-3xl border border-slate-200 bg-white shadow-sm p-10 md:p-12 text-center">
+                <p
+                    class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold tracking-wide text-blue-900">
+                    TRUST
                 </p>
-                <p>
-                    You value performance, but you're not interested in punishing workouts or grinding yourself down.
-                    You want energy that lasts beyond the gym.
-                    You want strength that supports your life, not competes with it.
-                </p>
-                <p class="font-medium text-slate-900">
-                    You may notice:
-                </p>
-                <ul class="space-y-3 text-neutral-600 ml-4">
-                    <li>• Stiffness or tension that doesn't match your effort</li>
-                    <li>• Energy dips despite training consistently</li>
-                    <li>• Recovery taking longer than it used to</li>
-                    <li>• A sense that you're working hard… but not moving forward</li>
-                </ul>
-                <p class="font-medium text-slate-900">
-                    You don't need more volume.<br />
-                    You need smarter inputs.
-                </p>
-                <p class="text-center italic text-neutral-700">
-                    Performance Energy Coaching is built for people who want to train hard when it's time — and restore
-                    intelligently when it's not.
-                </p>
+
+                <h3 class="mt-4 text-xl md:text-2xl font-semibold text-slate-900">
+                    Trusted by professionals balancing work, health, and family
+                </h3>
+
+                <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm text-neutral-600">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="font-semibold text-slate-900">Evidence-informed training</p>
+                        <p class="mt-1">Strength, breathing mechanics, and nervous system regulation.</p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="font-semibold text-slate-900">Experience with professionals</p>
+                        <p class="mt-1">Clients include physicians, teachers, therapists, executives, and entrepreneurs.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="font-semibold text-slate-900">Built for real schedules</p>
+                        <p class="mt-1">Programs designed to fit demanding careers and family life.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-24 fade-in">
+    <section id="services" class="py-20 md:py-24 bg-white border-t border-slate-200 fade-in">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-16 text-slate-900">Services</h2>
+            <div class="rounded-3xl border border-slate-200 bg-white shadow-sm p-10 md:p-14">
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-4 text-slate-900">Studio Coaching</h3>
-                    <p class="text-neutral-600 mb-6">
-                        Personalized in-person performance and structural strength training.
+                <div class="max-w-3xl mx-auto text-center">
+                    <p
+                        class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold tracking-wide text-blue-900">
+                        SERVICES
                     </p>
-                    <a href="studio-coaching.html" class="text-blue-900 font-medium hover:underline">Learn More →</a>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                        Choose your coaching format
+                    </h2>
+                    <p class="mt-4 text-lg text-neutral-600">
+                        Same method — delivered in the format that fits your schedule.
+                    </p>
                 </div>
 
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-4 text-slate-900">Online Coaching</h3>
-                    <p class="text-neutral-600 mb-6">
-                        Progressive strength and energy development, guided remotely.
-                    </p>
-                    <a href="online-coaching.html" class="text-blue-900 font-medium hover:underline">Learn More →</a>
+                <div class="mt-14 grid md:grid-cols-3 gap-6">
+
+                    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Studio & In-Home Coaching</h3>
+                            <span
+                                class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Hands-on</span>
+                        </div>
+
+                        <p class="mt-3 text-neutral-600">
+                            For professionals who want in-person guidance, technique precision, and structured progress.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li>• Private 1:1 or 1:2 sessions</li>
+                            <li>• Strength + mechanics + breathing integration</li>
+                            <li>• Nervous system resets included</li>
+                        </ul>
+
+                        <a href="studio-coaching.html"
+                            class="mt-6 inline-flex items-center gap-2 text-blue-900 font-medium hover:underline">
+                            Learn more <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Online Coaching</h3>
+                            <span
+                                class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Remote</span>
+                        </div>
+
+                        <p class="mt-3 text-neutral-600">
+                            For busy schedules. Personalized programming, accountability, and support — wherever you
+                            are.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li>• Customized plan + progressions</li>
+                            <li>• Check-ins + feedback</li>
+                            <li>• Reset library access</li>
+                        </ul>
+
+                        <a href="online-coaching.html"
+                            class="mt-6 inline-flex items-center gap-2 text-blue-900 font-medium hover:underline">
+                            Learn more <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Resets Only</h3>
+                            <span
+                                class="text-xs font-semibold text-slate-700 bg-white border border-slate-200 px-3 py-1 rounded-full">
+                                Best starter
+                            </span>
+                        </div>
+
+                        <p class="mt-3 text-neutral-600">
+                            Short guided resets to downshift, restore breathing mechanics, and rebuild usable energy.
+                        </p>
+
+                        <ul class="mt-5 space-y-2 text-neutral-700">
+                            <li>• 5–15 minute sessions</li>
+                            <li>• Easy to repeat daily</li>
+                            <li>• Great for busy weeks</li>
+                        </ul>
+
+                        <a href="resets.html"
+                            class="mt-6 inline-flex items-center gap-2 text-blue-900 font-medium hover:underline">
+                            Learn more <span aria-hidden="true">→</span>
+                        </a>
+
+                        <div class="mt-2">
+                            <a href="resets.html#reset"
+                                class="text-sm text-slate-600 hover:text-blue-900 hover:underline">
+                                Or start your 7-day energy reset
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-4 text-slate-900">Energy Capacity Reset</h3>
-                    <p class="text-neutral-600 mb-6">
-                        Short guided resets restoring breath, position, and nervous system balance.
+                <div class="mt-10 text-center">
+                    <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-block">
+                        Book Your Energy Strategy Call
+                    </a>
+
+                    <p class="mt-3 text-sm text-neutral-600">
+                        Not sure which option fits?
+                        <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                            class="text-blue-900 font-medium hover:underline">
+                            Book a free energy consultation
+                        </a>
+                        and we’ll map it out in 15–20 minutes.
                     </p>
-                    <a href="#reset" class="text-blue-900 font-medium hover:underline">Learn More →</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- RESET OPT-IN (LIGHT VERSION — no dark sections) -->
-    <section id="reset" class="py-24 bg-slate-50 border-t border-slate-200 fade-in">
-        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-semibold tracking-tight mb-6 text-slate-900">Experience the Shift in 14 Days.</h2>
-            <p class="mb-10 text-neutral-600">
-                Daily guided resets designed to restore breathing mechanics, reduce tension, and increase usable
-                energy.
-            </p>
+    <!-- OUTCOMES / PROOF -->
+    <section id="results" class="py-20 md:py-24 bg-slate-50 border-t border-slate-200 fade-in">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">What Changes First</h2>
+                <p class="mt-4 text-lg text-neutral-600">
+                    Early wins are usually system-level: breathing ease, tension release, steadier mood, improved
+                    recovery.
+                </p>
+            </div>
 
-            <form id="homeResetForm" action="https://formspree.io/f/xzdawlyl" method="POST"
-                class="flex flex-col gap-4 max-w-md mx-auto">
+            <div class="mt-14 grid md:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <h3 class="font-semibold text-slate-900">Physical</h3>
+                    <p class="mt-3 text-neutral-600">
+                        Less protective tension, smoother movement, better tolerance under load.
+                    </p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <h3 class="font-semibold text-slate-900">Mental</h3>
+                    <p class="mt-3 text-neutral-600">
+                        Clearer thinking, less overwhelm, faster decompression after stress.
+                    </p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <h3 class="font-semibold text-slate-900">Systemic</h3>
+                    <p class="mt-3 text-neutral-600">
+                        Better recovery, more stable daily energy, improved stress capacity.
+                    </p>
+                </div>
+            </div>
 
-                <input type="text" name="name" placeholder="Name"
-                    class="px-4 py-3 rounded-md border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    required />
+            <div class="mt-12 grid lg:grid-cols-3 gap-6">
+                <figure class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <blockquote class="text-neutral-700">
+                        “The resets made my breathing feel easier within a week — and my workouts stopped draining me.”
+                    </blockquote>
+                    <figcaption class="mt-4 text-sm text-neutral-500">— Client, 40s</figcaption>
+                </figure>
+                <figure class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <blockquote class="text-neutral-700">
+                        “I feel calmer under pressure and recover faster. It’s not hype — it’s a system change.”
+                    </blockquote>
+                    <figcaption class="mt-4 text-sm text-neutral-500">— Client, 50s</figcaption>
+                </figure>
+                <figure class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                    <blockquote class="text-neutral-700">
+                        “This finally fits my life. Short resets + smart strength is the missing piece.”
+                    </blockquote>
+                    <figcaption class="mt-4 text-sm text-neutral-500">— Client, 50s</figcaption>
+                </figure>
+            </div>
 
-                <input type="email" name="email" placeholder="Email"
-                    class="px-4 py-3 rounded-md border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    required />
-
-                <input type="hidden" name="source" value="Homepage Reset Opt-in" />
-
-                <button type="submit"
-                    class="bg-blue-900 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
-                    Get My 2-Week Reset Access
-                </button>
-
-                <p class="text-sm text-neutral-500">No spam. Just usable tools.</p>
-
-            </form>
+            <div class="mt-10 text-center">
+                <a href="resets.html#reset" class="text-blue-900 font-medium hover:underline">
+                    Start Your 7-Day Energy Reset →
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section id="contact" class="py-24 bg-slate-50 border-t border-slate-200 text-center fade-in">
+    <!-- RESET CTA -->
+    <section id="reset" class="py-20 md:py-24 bg-white border-t border-slate-200 fade-in">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight mb-8 text-slate-900">Energy First. Everything Else
-                Improves.</h2>
-            <a href="mailto:youremail@example.com"
-                class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
-                Book Consultation
-            </a>
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-10 md:p-14 shadow-sm text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-slate-900">
+                    Experience the shift in 7 days.
+                </h2>
+                <p class="mb-6 text-neutral-600 max-w-2xl mx-auto">
+                    Daily guided resets designed to restore breathing mechanics, reduce hidden tension, and increase
+                    usable energy — even on busy weeks.
+                </p>
+
+                <p class="mb-10 text-neutral-600 max-w-2xl mx-auto">
+                    Start on the Reset System page to enter your email through MailerLite and receive Day 1.
+                </p>
+
+                <a href="resets.html#reset"
+                    class="inline-block bg-blue-900 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+                    Start Your 7-Day Energy Reset
+                </a>
+
+                <p class="mt-4 text-sm text-neutral-500">No spam. Just usable tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 border-t border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <h2 class="text-3xl font-semibold text-slate-900">
+                What happens on the consult?
+            </h2>
+
+            <p class="mt-4 text-neutral-600 max-w-2xl mx-auto">
+                A short conversation to understand your goals, what’s draining your energy,
+                and the best starting path.
+            </p>
+
+            <div class="mt-10 grid md:grid-cols-3 gap-6 text-left">
+
+                <div class="rounded-xl border border-slate-200 p-6">
+                    <h3 class="font-semibold text-slate-900">1. Clarify your situation</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        Work demands, energy patterns, training history, and current challenges.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 p-6">
+                    <h3 class="font-semibold text-slate-900">2. Identify capacity gaps</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        Where tension, breathing mechanics, or recovery may be limiting performance.
+                    </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 p-6">
+                    <h3 class="font-semibold text-slate-900">3. Map your starting plan</h3>
+                    <p class="mt-2 text-neutral-600 text-sm">
+                        Whether resets, coaching, or a hybrid approach makes the most sense.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="mt-8 text-sm text-neutral-500">
+                No pressure and no obligation — just clarity on the best next step.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FINAL CTA / CONTACT -->
+    <section id="contact" class="py-20 md:py-24 bg-slate-50 border-t border-slate-200 text-center fade-in">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-slate-900">
+                Energy first. Everything else improves.
+            </h2>
+
+            <p class="text-lg text-neutral-600 max-w-2xl mx-auto mb-8">
+                If you want a clear plan (studio, online, or resets-only), book a free consult and we’ll map out the
+                best starting point.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6 text-sm text-neutral-600 mb-10">
+
+                <div class="flex items-center gap-2">
+                    <span class="text-green-600">●</span>
+                    <span>No pressure conversation</span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-green-600">●</span>
+                    <span>15–20 minutes</span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-green-600">●</span>
+                    <span>Leave with a clear starting plan</span>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+                <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                    class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
+                    Book Your Energy Strategy Call
+                </a>
+
+                <a href="#services"
+                    class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center">
+                    Review Services
+                </a>
+
+            </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white py-8 text-center text-sm text-neutral-500">
+    <footer class="bg-white py-10 text-center text-sm text-neutral-500 border-t border-slate-200/70">
         © 2026 BusyBodyz. All Rights Reserved.
     </footer>
-    <script>
-        (function () {
-            const form = document.getElementById("homeResetForm");
-            if (!form) return;
 
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn ? btn.textContent : "";
-                if (btn) { btn.disabled = true; btn.textContent = "Submitting…"; }
-
-                try {
-                    const res = await fetch(form.action, {
-                        method: "POST",
-                        body: new FormData(form),
-                        headers: { "Accept": "application/json" }
-                    });
-
-                    if (res.ok) {
-                        window.location.href = "thank-you.html";
-                    } else {
-                        alert("Submission failed. Please try again.");
-                    }
-                } catch (err) {
-                    alert("Network error. Please try again.");
-                } finally {
-                    if (btn) { btn.disabled = false; btn.textContent = originalText; }
-                }
-            });
-        })();
-    </script>
     <script src="script.js"></script>
 </body>
 
