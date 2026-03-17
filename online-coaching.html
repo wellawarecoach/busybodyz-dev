@@ -12,41 +12,65 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-white text-slate-800 antialiased">
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
 
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-slate-200/70 z-50">
         <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center gap-4">
-            <a href="index.html" class="block">
+            <a href="index.html" class="block min-w-0">
                 <div class="text-xl font-semibold tracking-tight text-slate-900">BusyBodyz</div>
                 <div class="text-xs text-neutral-500 mt-1">Performance Energy Coaching</div>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm text-slate-800">
-                <a href="index.html#method" class="hover:text-blue-900">Method</a>
-                <a href="index.html#services" class="hover:text-blue-900">Services</a>
-                <a href="index.html#results" class="hover:text-blue-900">Outcomes</a>
-                <a href="index.html#contact" class="hover:text-blue-900">Contact</a>
+                <a href="studio-coaching.html" class="hover:text-blue-900">Studio (In-Person)</a>
+                <a href="online-coaching.html" class="hover:text-blue-900">Online (Remote)</a>
+                <a href="resets.html" class="hover:text-blue-900">Energy Resets</a>
                 <a href="about.html" class="hover:text-slate-900">About</a>
+                <a href="index.html#contact" class="hover:text-slate-900">Contact</a>
             </nav>
 
-            <div class="hidden md:flex items-center gap-3">
-                <a href="resets.html#reset"
-                    class="border border-slate-300 bg-white text-slate-900 px-4 py-2 rounded-md text-sm hover:bg-slate-50 transition">
-                    Start Your 7-Day Energy Reset
-                </a>
-                <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
-                    class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
-                    Book Your Free Energy Strategy Call
-                </a>
-            </div>
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition"
+                aria-label="Toggle menu" aria-expanded="false">
+                <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-            <a href="resets.html#reset"
-                class="md:hidden bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
-                Start Here
+            <!-- Desktop CTA -->
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="hidden md:inline-flex bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition whitespace-nowrap">
+                Start Your Energy Consult
             </a>
         </div>
     </header>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel" class="fixed inset-0 z-50 bg-white pt-24 pb-6 px-6 overflow-y-auto hidden">
+        <nav class="flex flex-col space-y-4 text-lg">
+            <a href="index.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Home</a>
+            <a href="studio-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Studio
+                (In-Person)</a>
+            <a href="online-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Online
+                (Remote)</a>
+            <a href="resets.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Energy Resets</a>
+            <a href="about.html" class="py-3 border-b border-slate-200 hover:text-blue-900">About</a>
+            <a href="index.html#contact" class="py-3 border-b border-slate-200 hover:text-blue-900">Contact</a>
+        </nav>
+        <div class="mt-8">
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="block w-full bg-blue-900 text-white px-6 py-4 rounded-md text-center text-lg hover:bg-blue-800 transition">
+                Start Your Energy Consult
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
 
     <div class="pt-24"></div>
 
@@ -61,31 +85,46 @@
                 </p>
 
                 <h1 class="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
-                    Online Coaching
+                    Online Coaching to Build Strength, Improve Recovery, and Restore Daily Energy
                 </h1>
 
-                <p class="mt-5 text-lg text-neutral-600 max-w-2xl mx-auto">
-                    Capacity-first strength training with resets and accountability — built for busy professionals who
-                    want measurable progress without burnout cycles.
+                <p class="mt-5 text-lg text-neutral-600 max-w-3xl mx-auto">
+                    Structured remote coaching with custom programming, guided resets, and accountability — built for
+                    busy professionals who want consistent progress without burnout cycles.
                 </p>
 
-                <p class="mt-4 text-sm text-slate-500">
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
+                        Start Your Energy Consult
+                    </a>
+                    <a href="#plans"
+                        class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center">
+                        View Online Plans
+                    </a>
+                </div>
+
+                <!-- Trust Strip -->
+                <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-5">
+                    <div class="grid sm:grid-cols-3 gap-4 text-sm text-slate-700">
+                        <div>
+                            <p class="font-semibold text-slate-900">25 years coaching experience</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Certified canfitpro Personal Training Specialist</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Founded by Lorry Brown</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-sm text-slate-500">
                     Online coaching starts at <span class="font-semibold text-slate-900">$230/month</span>.
                     All plans include <span class="font-semibold text-slate-900">BusyBodyz reset access</span>.
                 </p>
 
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#plans"
-                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
-                        View Online Plans
-                    </a>
-                    <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
-                        class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center">
-                        Book Your Free Energy Strategy Call
-                    </a>
-                </div>
-
-                <p class="mt-6 text-xs text-slate-500">
+                <p class="mt-4 text-xs text-slate-500">
                     Prefer in-person? See <a class="text-blue-900 hover:underline" href="studio-coaching.html">Studio &
                         In-Home Coaching</a>.
                 </p>
@@ -101,15 +140,16 @@
                     Training alone is easy to start — hard to sustain.
                 </h2>
                 <p class="mt-4 text-lg text-neutral-600">
-                    Without structure and feedback, people tend to push harder when they should recover, or drift when
-                    they need a plan. Energy becomes unreliable, and progress stalls.
+                    Without structure, feedback, and recovery support, progress slows. Energy becomes inconsistent, and
+                    training starts to feel like another drain instead of something that builds you up.
                 </p>
             </div>
 
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="rounded-2xl border border-slate-200 bg-white p-6">
                     <div class="font-semibold text-slate-900">Inconsistent execution</div>
-                    <p class="mt-2 text-neutral-600">A plan exists — but it doesn’t stick under real-life pressure.</p>
+                    <p class="mt-2 text-neutral-600">A plan exists — but it doesn’t hold up under real-life pressure.
+                    </p>
                 </div>
                 <div class="rounded-2xl border border-slate-200 bg-white p-6">
                     <div class="font-semibold text-slate-900">Recovery debt</div>
@@ -118,7 +158,7 @@
                 <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
                     <div class="font-semibold text-slate-900">Key idea</div>
                     <p class="mt-2 text-neutral-700 font-medium">
-                        Energy is a system issue — not a motivation issue.
+                        Better energy usually comes from better structure, smarter recovery, and consistent support.
                     </p>
                 </div>
             </div>
@@ -136,21 +176,21 @@
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">Reset</h3>
                     <p class="text-neutral-600">
-                        Short guided sequences to reduce residual tension and downshift the nervous system.
+                        Guided sequences to reduce tension and support recovery between sessions and daily demands.
                     </p>
                 </div>
 
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">Breathe</h3>
                     <p class="text-neutral-600">
-                        Mechanics-first breathing work to restore ribcage mobility, posture, and efficiency under load.
+                        Mechanics-based breathing work to improve posture, movement quality, and efficiency.
                     </p>
                 </div>
 
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">Strength</h3>
                     <p class="text-neutral-600">
-                        Capacity-first training that builds durable output without grinding into burnout cycles.
+                        Capacity-first training that builds strength without feeding burnout cycles.
                     </p>
                 </div>
             </div>
@@ -182,7 +222,7 @@
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">Less tension, cleaner movement</h3>
                     <p class="text-neutral-600">
-                        Resets + mechanics reduce bracing and compensation so you move better and recover faster.
+                        Resets and mechanics help reduce bracing so you move better and recover faster.
                     </p>
                 </div>
 
@@ -230,8 +270,7 @@
 
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
                     <h3 class="font-semibold text-lg mb-2 text-slate-900">4. Ongoing refinement</h3>
-                    <p class="text-neutral-600">Adjustments based on feedback, performance data, and recovery status.
-                    </p>
+                    <p class="text-neutral-600">Adjustments based on feedback, performance, and recovery status.</p>
                 </div>
             </div>
         </div>
@@ -262,8 +301,8 @@
                     </div>
 
                     <p class="text-neutral-600 mb-6">
-                        Best for self-directed clients who want a clear training plan, steady progress, and light-touch
-                        coaching support.
+                        Best for self-directed clients who want a clear plan, steady progress, and light-touch coaching
+                        support.
                     </p>
 
                     <ul class="space-y-3 text-neutral-600 mb-8">
@@ -275,7 +314,7 @@
 
                     <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
                         class="mt-auto border border-slate-300 bg-white text-slate-900 px-6 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center w-full">
-                        Book Your Free Energy Strategy Call
+                        Start Your Energy Consult
                     </a>
 
                     <p class="mt-4 text-sm text-slate-500">
@@ -301,8 +340,7 @@
                     </div>
 
                     <p class="text-neutral-600 mb-6">
-                        Best for clients who want more accountability, more frequent feedback, and a stronger structure
-                        to stay consistent.
+                        Best for clients who want more accountability, more frequent feedback, and stronger structure.
                     </p>
 
                     <ul class="space-y-3 text-neutral-600 mb-8">
@@ -314,7 +352,7 @@
 
                     <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
                         class="mt-auto bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center w-full">
-                        Book Your Free Energy Strategy Call
+                        Start Your Energy Consult
                     </a>
 
                     <p class="mt-4 text-sm text-slate-500">
@@ -336,7 +374,7 @@
 
                     <p class="text-neutral-600 mb-6">
                         Best for clients who want close coaching contact, maximum accountability, and ongoing
-                        adjustments throughout the month.
+                        adjustments.
                     </p>
 
                     <ul class="space-y-3 text-neutral-600 mb-8">
@@ -348,7 +386,7 @@
 
                     <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
                         class="mt-auto border border-slate-300 bg-white text-slate-900 px-6 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center w-full">
-                        Book Your Free Energy Strategy Call
+                        Start Your Energy Consult
                     </a>
 
                     <p class="mt-4 text-sm text-slate-500">
@@ -367,7 +405,7 @@
             <div class="mt-10 text-center">
                 <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
                     class="text-blue-900 font-medium hover:underline">
-                    Not sure which plan fits? Book your free energy strategy call →
+                    Not sure which plan fits? Start your energy consult →
                 </a>
             </div>
         </div>
@@ -379,11 +417,11 @@
             <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 text-center mb-8">
                 Who This Is Best For
             </h2>
-            <ul class="space-y-3 text-neutral-600 text-lg max-w-2xl mx-auto">
+            <ul class="space-y-4 text-neutral-600 text-lg max-w-3xl mx-auto">
                 <li>Busy professionals who want structure without commute time</li>
-                <li>Adults 40+ managing recovery, stress, and energy</li>
-                <li>Former athletes rebuilding strength safely</li>
-                <li>People training at home or commercial gyms</li>
+                <li>Adults 40+ managing energy, recovery, and consistency</li>
+                <li>People who want guidance but still train independently</li>
+                <li>Those who want strength without falling into burnout cycles</li>
             </ul>
         </div>
     </section>
@@ -431,7 +469,8 @@
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
                     <h3 class="font-semibold text-slate-900 mb-2">Is this suitable if I have past injuries?</h3>
                     <p class="text-neutral-600">
-                        Yes. Programming is adjusted around your history and current capacity.
+                        Programming is adjusted around your history and current capacity. Coaching is educational and
+                        not a substitute for medical care.
                     </p>
                 </div>
             </div>
@@ -467,25 +506,26 @@
     <section class="py-20 md:py-24 fade-in">
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
-                Ready to expand your capacity — wherever you train?
+                Ready to build strength and energy — wherever you train?
             </h2>
             <p class="text-lg text-neutral-600 mb-10">
-                Start with the Reset to establish your baseline — then we’ll map the right online plan for your goals.
+                Start your energy consult and we’ll map the right online plan for your goals, schedule, and current
+                capacity.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="resets.html#reset"
-                    class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
-                    Start Your 7-Day Energy Reset
-                </a>
                 <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                    class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition inline-flex items-center justify-center">
+                    Start Your Energy Consult
+                </a>
+                <a href="resets.html#reset"
                     class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition inline-flex items-center justify-center">
-                    Book Your Free Energy Strategy Call
+                    Start Your 7-Day Energy Reset
                 </a>
             </div>
 
             <p class="mt-6 text-sm text-neutral-500">
-                Prefer email? <a class="text-blue-900 hover:underline"
+                Prefer email? <a class="text-blue-900 hover:underline break-all"
                     href="mailto:busybodyzpersonalfitness@gmail.com">busybodyzpersonalfitness@gmail.com</a>
             </p>
         </div>

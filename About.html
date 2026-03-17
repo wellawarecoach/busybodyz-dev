@@ -24,27 +24,55 @@
             </a>
 
             <nav class="hidden md:flex space-x-6 text-sm text-slate-700">
-                <a href="index.html#method" class="hover:text-slate-900">Method</a>
-                <a href="index.html#services" class="hover:text-slate-900">Coaching</a>
-                <a href="resets.html" class="hover:text-slate-900">Resets</a>
+                <a href="studio-coaching.html" class="hover:text-slate-900">Studio (In-Person)</a>
+                <a href="online-coaching.html" class="hover:text-slate-900">Online (Remote)</a>
+                <a href="resets.html" class="hover:text-slate-900">Energy Resets</a>
                 <a href="about.html" class="hover:text-slate-900">About</a>
                 <a href="index.html#contact" class="hover:text-slate-900">Contact</a>
             </nav>
 
-            <div class="flex items-center gap-3">
-                <a href="resets.html#reset"
-                    class="hidden md:inline-flex bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
-                    Start Your 7-Day Energy Reset
-                </a>
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition"
+                aria-label="Toggle menu" aria-expanded="false">
+                <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-                <a href="resets.html#reset"
-                    class="md:hidden bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
-                    Start Here
-                </a>
-            </div>
+            <!-- Desktop CTA -->
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="hidden md:inline-flex bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
+                Start Your Energy Consult
+            </a>
 
         </div>
     </header>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel" class="fixed inset-0 z-50 bg-white pt-24 pb-6 px-6 overflow-y-auto hidden">
+        <nav class="flex flex-col space-y-4 text-lg">
+            <a href="index.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Home</a>
+            <a href="studio-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Studio
+                (In-Person)</a>
+            <a href="online-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Online
+                (Remote)</a>
+            <a href="resets.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Energy Resets</a>
+            <a href="about.html" class="py-3 border-b border-slate-200 hover:text-blue-900">About</a>
+            <a href="index.html#contact" class="py-3 border-b border-slate-200 hover:text-blue-900">Contact</a>
+        </nav>
+        <div class="mt-8">
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="block w-full bg-blue-900 text-white px-6 py-4 rounded-md text-center text-lg hover:bg-blue-800 transition">
+                Start Your Energy Consult
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
 
     <div class="h-20"></div>
 
@@ -198,6 +226,7 @@
         © 2026 BusyBodyz. All Rights Reserved.
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

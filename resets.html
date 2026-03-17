@@ -233,57 +233,91 @@
     </style>
 </head>
 
-<body class="bg-white text-slate-800 antialiased">
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
 
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-slate-200/70 z-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center gap-4">
             <a href="index.html" class="block">
                 <div class="text-xl font-semibold tracking-tight text-slate-900">BusyBodyz</div>
                 <div class="text-xs text-neutral-500 mt-1">Performance Energy Coaching</div>
             </a>
 
             <nav class="hidden md:flex gap-8 text-sm text-slate-800">
-                <a href="#overview" class="hover:text-blue-900">Overview</a>
-                <a href="#map" class="hover:text-blue-900">Map</a>
-                <a href="#pillars" class="hover:text-blue-900">Pillars</a>
-                <a href="#trainerize" class="hover:text-blue-900">Access</a>
-                <a href="#reset" class="hover:text-blue-900">Start</a>
+                <a href="studio-coaching.html" class="hover:text-blue-900">Studio (In-Person)</a>
+                <a href="online-coaching.html" class="hover:text-blue-900">Online (Remote)</a>
+                <a href="resets.html" class="hover:text-blue-900">Energy Resets</a>
                 <a href="about.html" class="hover:text-slate-900">About</a>
+                <a href="index.html#contact" class="hover:text-slate-900">Contact</a>
             </nav>
 
-            <a href="#reset" class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
-                Get Access
+            <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition"
+                aria-label="Toggle menu" aria-expanded="false">
+                <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="hidden md:inline-flex bg-blue-900 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-800 transition">
+                Start Your Energy Consult
             </a>
         </div>
     </header>
 
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel" class="fixed inset-0 z-50 bg-white pt-24 pb-6 px-6 overflow-y-auto hidden">
+        <nav class="flex flex-col space-y-4 text-lg">
+            <a href="index.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Home</a>
+            <a href="studio-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Studio
+                (In-Person)</a>
+            <a href="online-coaching.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Online
+                (Remote)</a>
+            <a href="resets.html" class="py-3 border-b border-slate-200 hover:text-blue-900">Energy Resets</a>
+            <a href="about.html" class="py-3 border-b border-slate-200 hover:text-blue-900">About</a>
+            <a href="index.html#contact" class="py-3 border-b border-slate-200 hover:text-blue-900">Contact</a>
+        </nav>
+        <div class="mt-8">
+            <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
+                class="block w-full bg-blue-900 text-white px-6 py-4 rounded-md text-center text-lg hover:bg-blue-800 transition">
+                Start Your Energy Consult
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
+
     <div class="pt-24"></div>
 
     <!-- HERO -->
-    <section class="py-24 fade-in">
+    <section class="py-20 md:py-24 fade-in">
         <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
             <div
                 class="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-10 md:p-14 shadow-sm">
                 <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">BusyBodyz Reset System</p>
 
                 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6 text-slate-900">
-                    Reduce tension.<br />Restore capacity.<br />Build usable energy.
+                    Reduce tension.<br />Recover more fully.<br />Restore usable energy.
                 </h1>
 
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-10">
-                    A focused <span class="font-semibold text-slate-900">7-day guided reset experience</span>
-                    for busy professionals who feel switched on, run down, or harder-working than they should have to
-                    be.
-                    You’ll receive one short email per day plus access to a
-                    <span class="font-semibold text-slate-900">focused 4-reset starter library</span>
-                    inside Trainerize — drawn from the broader
-                    <span class="font-semibold text-slate-900">BusyBodyz Energy Capacity System</span>.
+                <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-8">
+                    A simple <span class="font-semibold text-slate-900">7-day guided reset experience</span> for busy
+                    professionals who feel tight, wired, drained, or slower to recover than they should.
+                </p>
+
+                <p class="text-base text-neutral-600 max-w-2xl mx-auto mb-10">
+                    You’ll receive one short email per day and access to a
+                    <span class="font-semibold text-slate-900">4-reset starter library in Trainerize</span>
+                    so you can begin with clear guidance in one place.
                 </p>
 
                 <div class="flex flex-col md:flex-row justify-center gap-4">
                     <a href="#reset" class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                        Get the 7-Day Reset System
+                        Start the 7-Day Reset System
                     </a>
                     <a href="#trainerize"
                         class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-50 transition">
@@ -297,12 +331,12 @@
                         <div class="text-lg font-semibold text-slate-900 mt-1">6–10 minutes</div>
                     </div>
                     <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
-                        <div class="text-xs text-neutral-500">Starter library</div>
-                        <div class="text-lg font-semibold text-slate-900 mt-1">4 guided resets</div>
+                        <div class="text-xs text-neutral-500">What you get</div>
+                        <div class="text-lg font-semibold text-slate-900 mt-1">7 emails + 4 resets</div>
                     </div>
                     <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
-                        <div class="text-xs text-neutral-500">Where you’ll access</div>
-                        <div class="text-lg font-semibold text-slate-900 mt-1">Trainerize</div>
+                        <div class="text-xs text-neutral-500">Best for</div>
+                        <div class="text-lg font-semibold text-slate-900 mt-1">Stress, tension, recovery</div>
                     </div>
                 </div>
             </div>
@@ -313,12 +347,13 @@
     <section id="overview" class="py-20 fade-in">
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-semibold tracking-tight mb-8 text-slate-900">
-                You're Not Out of Shape. You're Out of Capacity.
+                You’re Not Out of Shape. You’re Overloaded.
             </h2>
 
             <div class="max-w-2xl mx-auto">
                 <p class="text-lg text-slate-800 mb-6">
-                    You’re not lazy. You’re overloaded.
+                    Energy issues are often not a motivation problem. They’re a tension, recovery, and regulation
+                    problem.
                 </p>
 
                 <ul class="space-y-4 text-left text-lg text-slate-800">
@@ -328,15 +363,15 @@
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
-                        <span>Sleep that doesn’t restore</span>
+                        <span>Sleep that doesn’t leave you restored</span>
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
-                        <span>Fatigue despite training</span>
+                        <span>Fatigue even when you are still training</span>
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
-                        <span>Brain fog under stress</span>
+                        <span>Brain fog or low patience under stress</span>
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-1 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
@@ -345,7 +380,7 @@
                 </ul>
 
                 <p class="mt-10 text-slate-700 font-medium">
-                    Energy is a system issue — not a motivation issue.
+                    The right reset can help you feel less tight, breathe easier, and recover more effectively.
                 </p>
             </div>
         </div>
@@ -358,8 +393,8 @@
 
             <div class="text-lg text-neutral-700 space-y-6 max-w-3xl mx-auto">
                 <p>
-                    A reset is a short, focused sequence you perform on your own to reduce hidden tension,
-                    improve regulation, and restore how your body and nervous system work together.
+                    A reset is a short, focused sequence you do on your own to reduce hidden tension,
+                    improve breathing and regulation, and help your body recover more efficiently.
                 </p>
 
                 <p class="font-medium text-slate-900">
@@ -371,7 +406,7 @@
                 <p>It’s about removing what’s in the way.</p>
 
                 <p>
-                    When tension drops and your system recalibrates, strength feels smoother, recovery improves,
+                    When tension drops and your system settles, movement feels smoother, recovery improves,
                     and energy becomes more usable throughout the day.
                 </p>
 
@@ -379,6 +414,38 @@
                     You train to build capacity.<br />
                     You reset to protect and restore it.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="py-20 fade-in">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="rounded-3xl border border-slate-200 bg-white shadow-sm p-10 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 text-center mb-8">
+                    Who the Reset System Is For
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <div class="text-sm text-neutral-500 mb-2">If you feel</div>
+                        <div class="font-semibold text-slate-900">Always on</div>
+                        <p class="text-neutral-600 mt-2">Your system does not downshift easily, even when you rest.</p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <div class="text-sm text-neutral-500 mb-2">If you want</div>
+                        <div class="font-semibold text-slate-900">Better training returns</div>
+                        <p class="text-neutral-600 mt-2">Less bracing and better recovery can make strength feel
+                            smoother.</p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <div class="text-sm text-neutral-500 mb-2">If you need</div>
+                        <div class="font-semibold text-slate-900">More steady daily energy</div>
+                        <p class="text-neutral-600 mt-2">Less crash, less fog, and more capacity for work and life.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -392,8 +459,8 @@
                     The Energy Capacity Map
                 </h2>
                 <p class="text-lg text-neutral-700">
-                    Energy is not just physical. Your ability to train, recover, focus, and feel steady
-                    depends on four capacities working together.
+                    Energy is not just physical. Focus, regulation, movement quality, and recovery all affect how well
+                    you perform and how well you bounce back.
                 </p>
             </div>
 
@@ -405,7 +472,7 @@
                         <div class="text-xs uppercase tracking-wide text-neutral-500 mb-2">Top</div>
                         <h3 class="text-xl font-semibold text-slate-900">Cognitive / Focus</h3>
                         <p class="mt-2 text-neutral-600 text-sm">
-                            Restore clarity, attention, and task control.
+                            Restore clarity, attention, and smoother task transitions.
                         </p>
                     </div>
 
@@ -415,7 +482,7 @@
                         <div class="text-xs uppercase tracking-wide text-neutral-500 mb-2">Left</div>
                         <h3 class="text-xl font-semibold text-slate-900">Physical / Structural</h3>
                         <p class="mt-2 text-neutral-600 text-sm">
-                            Reduce bracing, unload tension, and restore movement quality.
+                            Reduce bracing, unload tension, and improve movement quality.
                         </p>
                     </div>
 
@@ -433,7 +500,7 @@
                         <div class="text-xs uppercase tracking-wide text-neutral-500 mb-2">Right</div>
                         <h3 class="text-xl font-semibold text-slate-900">Nervous System Regulation</h3>
                         <p class="mt-2 text-neutral-600 text-sm">
-                            Downshift stress and restore baseline calm.
+                            Downshift stress and restore a calmer baseline.
                         </p>
                     </div>
 
@@ -443,7 +510,7 @@
                         <div class="text-xs uppercase tracking-wide text-neutral-500 mb-2">Bottom</div>
                         <h3 class="text-xl font-semibold text-slate-900">Recovery</h3>
                         <p class="mt-2 text-neutral-600 text-sm">
-                            Rebuild reserves, emotional steadiness, and recovery capacity.
+                            Rebuild reserves and improve recovery capacity.
                         </p>
                     </div>
 
@@ -452,186 +519,39 @@
 
                 <div class="mt-10 max-w-3xl mx-auto text-center">
                     <p class="text-lg text-slate-800 font-medium">
-                        When energy drops, you don’t always need more effort.
-                        You may need the right reset.
+                        When energy drops, more effort is not always the answer.
                     </p>
                     <p class="mt-4 text-neutral-700">
-                        The BusyBodyz Reset System introduces one reset from each pillar so you can
-                        feel where your capacity is leaking and begin restoring it.
+                        The Reset System introduces one reset from each pillar so you can begin noticing where your
+                        energy is leaking and what helps restore it.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHO THIS IS FOR -->
-    <section class="py-20 fade-in">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="rounded-3xl border border-slate-200 bg-white shadow-sm p-10 md:p-12">
-                <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 text-center mb-8">
-                    Who the Reset System Is For
-                </h2>
-
-                <div class="grid md:grid-cols-3 gap-6 text-left">
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <div class="text-sm text-neutral-500 mb-2">If you feel</div>
-                        <div class="font-semibold text-slate-900">“Always on”</div>
-                        <p class="text-neutral-600 mt-2">Your system doesn’t downshift, even when you rest.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <div class="text-sm text-neutral-500 mb-2">If you want</div>
-                        <div class="font-semibold text-slate-900">Better training returns</div>
-                        <p class="text-neutral-600 mt-2">Strength feels smoother when tension stops hijacking position.
-                        </p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <div class="text-sm text-neutral-500 mb-2">If you need</div>
-                        <div class="font-semibold text-slate-900">Usable daily energy</div>
-                        <p class="text-neutral-600 mt-2">Less crash, less fog, more capacity for work and life.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MID-PAGE CTA -->
-    <section class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="rounded-3xl bg-blue-900 text-white shadow-sm p-10 md:p-14 text-center">
-                <p
-                    class="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white">
-                    START HERE
-                </p>
-
-                <h2 class="mt-4 text-3xl font-semibold">
-                    Start restoring your energy this week.
-                </h2>
-
-                <p class="mt-4 text-blue-100 max-w-2xl mx-auto">
-                    Experience the difference with guided resets designed to reduce tension,
-                    improve regulation, and restore more usable energy.
-                </p>
-
-                <a href="#reset"
-                    class="inline-block mt-8 bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-slate-100 transition">
-                    Start the 7-Day Reset System
-                </a>
-
-                <div class="mt-6">
-                    <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
-                        class="inline-block border border-white/30 text-white px-8 py-3 rounded-md font-medium hover:bg-white/10 transition">
-                        Book Your Free Energy Consult
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRY A RESET DEMO -->
-    <section class="py-24 border-t border-slate-200 bg-white fade-in">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8">
-            <div class="rounded-3xl border border-slate-200 bg-slate-50 shadow-sm p-10 md:p-12 text-center">
-                <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Try It First</p>
-
-                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-6">
-                    Try a Reset Right Now
-                </h2>
-
-                <p class="text-lg text-neutral-700 max-w-2xl mx-auto mb-8">
-                    Want to get a feel for how a BusyBodyz reset works before starting the full system?
-                    Try this short guided 5-minute reset to reduce tension, restore regulation,
-                    and experience the approach for yourself.
-                </p>
-
-                <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <a href="reset-demo.html"
-                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                        Try the 5-Minute Reset
-                    </a>
-                    <a href="#reset"
-                        class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-100 transition">
-                        Or Start the Full 7-Day System
-                    </a>
-                </div>
-
-                <div class="mt-8">
-                    <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
-                        class="inline-block border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-100 transition">
-                        Book Your Free Energy Consult
-                    </a>
-                </div>
-
-                <p class="mt-6 text-sm text-neutral-500">
-                    The demo gives you a sample. The 7-day system gives you structure, progression,
-                    and access to a focused 4-reset starter library.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PILLARS -->
-    <section id="pillars" class="py-24 fade-in">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold tracking-tight text-center mb-10 text-slate-900">
-                The Four Reset Pillars
-            </h2>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">1) Cognitive / Focus</h3>
-                    <p class="text-neutral-600">Restore clarity, attention control, and smoother task transitions.</p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">2) Nervous System Regulation</h3>
-                    <p class="text-neutral-600">Downshift reactivity, improve calm, and restore regulation.</p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">3) Physical / Structural</h3>
-                    <p class="text-neutral-600">Reduce tension, improve position, and restore movement quality.</p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">4) Recovery</h3>
-                    <p class="text-neutral-600">Rebuild reserves, reduce overload, and improve recovery capacity.</p>
-                </div>
-            </div>
-
-            <div class="mt-12 rounded-2xl border border-slate-200 bg-slate-50 shadow-sm p-8 max-w-4xl mx-auto">
-                <h3 class="font-semibold text-xl mb-3 text-center text-slate-900">How to Use the Starter Library</h3>
-                <p class="text-neutral-700 text-center max-w-2xl mx-auto">
-                    You don’t need more options — you need the right one for today.
-                    During the 7-day Reset System, you’ll be guided through four different reset categories and learn
-                    which one to choose based on your current state.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRAINERIZE ACCESS -->
+    <!-- HOW IT WORKS -->
     <section id="trainerize" class="py-24 bg-slate-50 border-t border-slate-200 fade-in">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <h2 class="text-3xl font-semibold tracking-tight text-center mb-12 text-slate-900">
-                Access the 4-Reset Starter Library in Trainerize
+                How Access Works
             </h2>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <div class="text-blue-900 font-semibold mb-2">Step 1</div>
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">Request access</h3>
+                    <h3 class="font-semibold text-xl mb-3 text-slate-900">Enter your email</h3>
                     <p class="text-neutral-600">
-                        Enter your email below to receive Day 1 and join the 7-day reset sequence.
+                        Sign up below to receive Day 1 and begin the 7-day reset sequence.
                     </p>
                 </div>
 
                 <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
                     <div class="text-blue-900 font-semibold mb-2">Step 2</div>
-                    <h3 class="font-semibold text-xl mb-3 text-slate-900">Get your invite</h3>
+                    <h3 class="font-semibold text-xl mb-3 text-slate-900">Check your inbox</h3>
                     <p class="text-neutral-600">
-                        You’ll receive an email with your Trainerize access and your first guided reset.
+                        You’ll receive your first email and instructions for accessing your 4-reset starter library in
+                        Trainerize.
                     </p>
                 </div>
 
@@ -639,9 +559,17 @@
                     <div class="text-blue-900 font-semibold mb-2">Step 3</div>
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">Start Day 1</h3>
                     <p class="text-neutral-600">
-                        Do today’s reset, notice what shifts, and continue with one short email each day.
+                        Follow one short daily action and use the library to practice the resets in one place.
                     </p>
                 </div>
+            </div>
+
+            <div class="mt-10 rounded-2xl border border-slate-200 bg-white shadow-sm p-8 max-w-3xl mx-auto">
+                <h3 class="font-semibold text-xl text-slate-900 mb-4 text-center">A simple note on Trainerize</h3>
+                <p class="text-neutral-700 text-center max-w-2xl mx-auto">
+                    You’ll receive email guidance plus access to a simple Trainerize starter library so you can follow
+                    the resets in one place. This is a free starting point, not an ongoing coaching commitment.
+                </p>
             </div>
 
             <div class="mt-10 rounded-2xl border border-slate-200 bg-white shadow-sm p-8 max-w-3xl mx-auto">
@@ -653,8 +581,7 @@
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-2 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
-                        <span>Access to a focused 4-reset starter library drawn from the full Energy Capacity
-                            System</span>
+                        <span>Access to a focused 4-reset starter library inside Trainerize</span>
                     </li>
                     <li class="flex gap-3">
                         <span class="mt-2 h-2 w-2 rounded-full bg-blue-900 flex-shrink-0"></span>
@@ -663,8 +590,48 @@
                 </ul>
             </div>
 
-            <div class="mt-10 text-center text-sm text-neutral-500">
+            <div class="mt-10 text-center">
+                <a href="#reset"
+                    class="inline-block bg-blue-900 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+                    Start the 7-Day Reset System
+                </a>
+            </div>
+
+            <div class="mt-6 text-center text-sm text-neutral-500">
                 Tip: If you don’t see the first email within a few minutes, check spam or junk.
+            </div>
+        </div>
+    </section>
+
+    <!-- TRY A RESET DEMO -->
+    <section class="py-24 border-t border-slate-200 bg-white fade-in">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 shadow-sm p-10 md:p-12 text-center">
+                <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Try It First</p>
+
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-6">
+                    Want a Sample Before You Start?
+                </h2>
+
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto mb-8">
+                    Try a short guided 5-minute reset to get a feel for the BusyBodyz approach before beginning the
+                    full 7-day system.
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="reset-demo.html"
+                        class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
+                        Try the 3-Minute Reset
+                    </a>
+                    <a href="#reset"
+                        class="border border-slate-300 bg-white text-slate-900 px-8 py-3 rounded-md hover:bg-slate-100 transition">
+                        Start the Full 7-Day System
+                    </a>
+                </div>
+
+                <p class="mt-6 text-sm text-neutral-500">
+                    The demo gives you a sample. The full system gives you daily structure and guided progression.
+                </p>
             </div>
         </div>
     </section>
@@ -677,14 +644,12 @@
             </h2>
 
             <p class="mb-6 text-lg text-neutral-700">
-                Get Day 1 immediately, then one short email per day for 7 days — plus access to a
-                focused 4-reset starter library inside Trainerize.
+                Get Day 1 immediately, then one short email per day for 7 days — plus access to your 4-reset starter
+                library.
             </p>
 
             <p class="mb-10 text-neutral-600 max-w-2xl mx-auto">
-                This starter library is drawn from the broader BusyBodyz Energy Capacity System,
-                so you can feel how different reset categories affect focus, regulation,
-                physical ease, and recovery.
+                Free to start. No spam. No ongoing commitment required.
             </p>
 
             <div class="max-w-xl mx-auto">
@@ -742,8 +707,8 @@
                                 <div class="ml-form-successContent">
                                     <h4>You’re in.</h4>
                                     <p>
-                                        Check your inbox for Day 1 and your next steps to access the BusyBodyz reset
-                                        system.
+                                        Check your inbox for Day 1 and the next steps for accessing your reset starter
+                                        library.
                                     </p>
                                 </div>
                             </div>
@@ -752,17 +717,17 @@
                 </div>
 
                 <p class="mt-6 text-sm text-neutral-500">
-                    No spam. Just Day 1, your reset sequence, and access instructions.
+                    You’ll get Day 1, your short reset sequence, and simple access instructions.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- FINAL CONSULT CTA -->
-    <section class="py-16 border-t border-slate-200 text-center">
+    <section class="py-16 border-t border-slate-200 text-center bg-white">
         <div class="max-w-3xl mx-auto px-6 lg:px-8">
             <h3 class="text-2xl font-semibold text-slate-900 mb-4">
-                Want help restoring your energy faster?
+                Want more direct support?
             </h3>
 
             <p class="text-neutral-600 mb-8">
@@ -772,13 +737,13 @@
 
             <a href="https://calendly.com/busybodyzpersonalfitness/30min" target="_blank"
                 class="bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-800 transition">
-                Book Your Free Energy Consult
+                Start Your Energy Consult
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white py-8 text-center text-sm text-neutral-500">
+    <footer class="bg-white py-8 text-center text-sm text-neutral-500 border-t border-slate-200/70">
         © 2026 BusyBodyz. All Rights Reserved.
     </footer>
 
