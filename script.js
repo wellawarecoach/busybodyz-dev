@@ -7,11 +7,14 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 faders.forEach((el) => observer.observe(el));
+
 // Global mobile menu toggle
 (() => {
     const btn = document.getElementById("mobileMenuButton");
     const panel = document.getElementById("mobileMenuPanel");
     const backdrop = document.getElementById("mobileMenuBackdrop");
+    const hamburgerIcon = document.getElementById("hamburgerIcon");
+    const closeIcon = document.getElementById("closeIcon");
 
     if (!btn || !panel || !backdrop) return;
 
@@ -19,12 +22,20 @@ faders.forEach((el) => observer.observe(el));
         panel.classList.remove("hidden");
         backdrop.classList.remove("hidden");
         btn.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
+
+        if (hamburgerIcon) hamburgerIcon.classList.add("hidden");
+        if (closeIcon) closeIcon.classList.remove("hidden");
     };
 
     const closeMenu = () => {
         panel.classList.add("hidden");
         backdrop.classList.add("hidden");
         btn.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+
+        if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
+        if (closeIcon) closeIcon.classList.add("hidden");
     };
 
     btn.addEventListener("click", () => {
@@ -34,15 +45,14 @@ faders.forEach((el) => observer.observe(el));
 
     backdrop.addEventListener("click", closeMenu);
 
-    // Close menu on link click (mobile)
-    panel.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+    panel.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", closeMenu)
+    );
 
-    // Close on Escape
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeMenu();
     });
 
-    // If resizing up to desktop, force-close
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 768) closeMenu();
     });
