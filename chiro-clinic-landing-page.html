@@ -12,25 +12,32 @@
 <body class="bg-white text-gray-900">
 
     <header class="flex justify-between items-center p-4 border-b bg-white">
-        <a href="index.html">
+
+        <!-- BRAND -->
+        <a href="index.html" class="flex items-center space-x-3">
             <img src="images/logo.png" alt="BusyBodyz" class="h-10">
+
+            <div class="leading-tight">
+                <div class="font-bold text-lg">BusyBodyz</div>
+                <div class="text-xs text-gray-500">Performance Energy Coaching</div>
+            </div>
         </a>
 
+        <!-- MINIMAL NAV -->
         <nav class="hidden md:flex space-x-6 text-sm">
-            <a href="index.html#method">Method</a>
-            <a href="index.html#services">Services</a>
-            <a href="resets.html#reset">Resets</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="resets.html#reset" class="hover:text-gray-600">Resets</a>
+            <a href="mailto:busybodyzfitness@gmail.com" class="hover:text-gray-600">Contact</a>
         </nav>
 
+        <!-- MOBILE MENU BUTTON -->
         <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+
     </header>
 
-    <div id="mobile-menu" class="hidden flex-col p-4 space-y-4 border-b bg-white">
-        <a href="index.html#method">Method</a>
-        <a href="index.html#services">Services</a>
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden flex flex-col p-4 space-y-4 border-b bg-white text-sm">
         <a href="resets.html#reset">Resets</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="mailto:busybodyzfitness@gmail.com">Contact</a>
     </div>
 
     <section class="grid md:grid-cols-2 min-h-[520px]">
@@ -61,6 +68,9 @@
                 <div class="inline-block bg-slate-900/90 text-white px-5 py-4 rounded-2xl shadow-lg max-w-sm">
                     <p class="font-semibold">This helps you stay in a better position.</p>
                 </div>
+                <p class="text-sm text-gray-500 mt-2 italic">
+                    Shared with you by your practitioner
+                </p>
             </div>
         </div>
     </section>

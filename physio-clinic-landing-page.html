@@ -13,19 +13,37 @@
 <body class="bg-white text-gray-900">
 
     <header class="flex justify-between items-center p-4 border-b bg-white">
-        <a href="index.html">
+
+        <!-- BRAND (logo + text like homepage) -->
+        <a href="index.html" class="flex items-center space-x-3">
+
+            <!-- If you have a logo image -->
             <img src="images/logo.png" alt="BusyBodyz" class="h-10">
+
+            <!-- Brand Text -->
+            <div class="leading-tight">
+                <div class="font-bold text-lg">BusyBodyz</div>
+                <div class="text-xs text-gray-500">Performance Energy Coaching</div>
+            </div>
+
         </a>
 
+        <!-- MINIMAL NAV -->
         <nav class="hidden md:flex space-x-6 text-sm">
-            <a href="index.html#method">Method</a>
-            <a href="index.html#services">Services</a>
-            <a href="resets.html#reset">Resets</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="resets.html#reset" class="hover:text-gray-600">Resets</a>
+            <a href="mailto:busybodyzfitness@gmail.com" class="hover:text-gray-600">Contact</a>
         </nav>
 
+        <!-- MOBILE MENU BUTTON -->
         <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+
     </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden flex flex-col p-4 space-y-4 border-b bg-white text-sm">
+        <a href="resets.html#reset">Resets</a>
+        <a href="mailto:busybodyzfitness@gmail.com">Contact</a>
+    </div>
 
     <div id="mobile-menu" class="hidden flex-col p-4 space-y-4 border-b bg-white">
         <a href="index.html#method">Method</a>
