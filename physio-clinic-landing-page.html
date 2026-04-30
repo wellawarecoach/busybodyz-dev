@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Between Sessions Reset | BusyBodyz</title>
+    <meta name="description"
+        content="Simple reset to help your physio treatment hold between sessions. Reduce tension and improve follow-through." />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <header class="flex justify-between items-center p-4 border-b bg-white">
+        <a href="index.html">
+            <img src="images/logo.png" alt="BusyBodyz" class="h-10">
+        </a>
+
+        <nav class="hidden md:flex space-x-6 text-sm">
+            <a href="index.html#method">Method</a>
+            <a href="index.html#services">Services</a>
+            <a href="resets.html#reset">Resets</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </header>
+
+    <div id="mobile-menu" class="hidden flex-col p-4 space-y-4 border-b bg-white">
+        <a href="index.html#method">Method</a>
+        <a href="index.html#services">Services</a>
+        <a href="resets.html#reset">Resets</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <section class="relative min-h-[520px] flex items-center overflow-hidden">
+        <img src="images/physio-hero.jpg" alt="Office worker holding neck tension at desk"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-white/45"></div>
+
+        <div class="relative max-w-4xl px-6 md:px-12 py-20">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-2xl">
+                Help Your Treatment Hold Between Sessions
+            </h1>
+
+            <p class="text-xl md:text-2xl max-w-xl mb-8">
+                A simple reset to reduce tension so your physio work carries through your day.
+            </p>
+
+            <div class="inline-block bg-slate-900/90 text-white px-5 py-4 rounded-2xl shadow-lg max-w-sm">
+                <p class="font-semibold">Tension builds during the day.</p>
+                <p class="text-sm">This helps your body reset.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
+        <div class="space-y-4 text-lg">
+            <p>Most people don’t lose progress because they’re not trying.</p>
+            <p>They lose it because tension builds back up during the day.</p>
+            <p>This reset helps reduce that load so movement feels easier—and follow-through becomes more natural.</p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold mb-4">3-Minute Reset</h2>
+            <audio controls class="w-full">
+                <source src="audio/Downshift-reset.mp3" type="audio/mpeg">
+            </audio>
+            <p class="text-sm text-gray-500 mt-3">Sit comfortably. Follow along.</p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-10">
+        <div class="bg-slate-100 rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Use This:</h2>
+
+            <div class="grid md:grid-cols-3 gap-6 text-lg">
+                <p>• Before or after your exercises</p>
+                <p>• When tension starts building</p>
+                <p>• During long work periods</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center px-6 py-14">
+        <a href="resets.html#reset"
+            class="inline-block bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-700 transition">
+            Start Your 7-Day Energy Reset
+        </a>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 pb-10">
+        <p>© BusyBodyz Performance Energy Coaching</p>
+        <p class="mt-2">
+            <a href="mailto:busybodyzfitness@gmail.com" class="underline">
+                busybodyzfitness@gmail.com
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').onclick = () =>
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment Support Reset | BusyBodyz</title>
+    <meta name="description" content="Simple reset to help chiropractic adjustments hold longer between visits." />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <header class="flex justify-between items-center p-4 border-b bg-white">
+        <a href="index.html">
+            <img src="images/logo.png" alt="BusyBodyz" class="h-10">
+        </a>
+
+        <nav class="hidden md:flex space-x-6 text-sm">
+            <a href="index.html#method">Method</a>
+            <a href="index.html#services">Services</a>
+            <a href="resets.html#reset">Resets</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </header>
+
+    <div id="mobile-menu" class="hidden flex-col p-4 space-y-4 border-b bg-white">
+        <a href="index.html#method">Method</a>
+        <a href="index.html#services">Services</a>
+        <a href="resets.html#reset">Resets</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <section class="grid md:grid-cols-2 min-h-[520px]">
+        <div class="relative min-h-[360px]">
+            <img src="images/chiro-before.jpg" alt="Forward head posture while seated"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute bottom-8 left-6 bg-slate-900/90 text-white px-5 py-4 rounded-2xl shadow-lg max-w-xs">
+                <p class="font-semibold">Daily posture pulls you out.</p>
+            </div>
+        </div>
+
+        <div class="relative min-h-[360px] flex items-center">
+            <img src="images/chiro-after.jpg" alt="Improved upright seated posture"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 bg-white/40"></div>
+
+            <div class="relative px-6 md:px-12 py-20">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Help Your Adjustments Hold Longer
+                </h1>
+
+                <p class="text-xl md:text-2xl mb-8 max-w-xl">
+                    A simple reset to reduce the tension that pulls your body back out of alignment.
+                </p>
+
+                <div class="inline-block bg-slate-900/90 text-white px-5 py-4 rounded-2xl shadow-lg max-w-sm">
+                    <p class="font-semibold">This helps you stay in a better position.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
+        <div class="space-y-4 text-lg">
+            <p>Daily tension and posture habits can undo progress between visits.</p>
+            <p>When that tension builds, your body is more likely to return to old patterns.</p>
+            <p>This reset helps reduce that pull so your body can stay in a better position throughout the day.</p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold mb-4">3-Minute Reset</h2>
+            <audio controls class="w-full">
+                <source src="audio/Downshift-reset.mp3" type="audio/mpeg">
+            </audio>
+            <p class="text-sm text-gray-500 mt-3">Sit comfortably. Follow along.</p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-10">
+        <div class="bg-green-50 rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Use This:</h2>
+
+            <div class="grid md:grid-cols-3 gap-6 text-lg">
+                <p>• After long periods sitting</p>
+                <p>• When you feel tension building</p>
+                <p>• Between chiropractic visits</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center px-6 py-14">
+        <a href="resets.html#reset"
+            class="inline-block bg-green-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 transition">
+            Start Your 7-Day Energy Reset
+        </a>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 pb-10">
+        <p>© BusyBodyz Performance Energy Coaching</p>
+        <p class="mt-2">
+            <a href="mailto:busybodyzfitness@gmail.com" class="underline">
+                busybodyzfitness@gmail.com
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').onclick = () =>
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+    </script>
+
+</body>
+
+</html>
