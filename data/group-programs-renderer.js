@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function createProgramCard(program, index) {
+        const programData = {
+            ...window.groupProgramDefaults,
+            ...program
+        };
         const style =
             programStyles[index % programStyles.length];
 
@@ -76,6 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const status =
             program.status || "Dates coming soon";
+
+        const schedule =
+            program.schedule || "To be announced";
+        const availability =
+            program.availability || "Contact for availability";
 
         return `
             <article
@@ -126,7 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <span>${program.maximumParticipants}</span>
                         </li>
+<li class="flex items-start gap-2">
+    <span
+        class="mt-0.5 font-semibold text-slate-900"
+        aria-hidden="true"
+    >
+        ✓
+    </span>
 
+    <span>${program.cohortProgression}</span>
+</li>
                         ${outcomeItems}
 
                         <li class="flex items-start gap-2">
@@ -137,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 ✓
                             </span>
 
-                            <span>Make-up or recorded session option</span>
+                            <span>${program.missedSessionSummary}</span>
                         </li>
                     </ul>
                     <details
@@ -242,19 +260,23 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </div>
 
                                     <div class="mt-1 font-semibold text-slate-900">
-                                        To be announced
+                                         ${schedule}
                                     </div>
                                 </div>
 
-                                <div>
-                                    <div class="text-slate-500">
-                                        Availability
-                                    </div>
+                               <div>
+    <div class="text-slate-500">
+        Availability
+    </div>
 
-                                    <div class="mt-1 font-semibold text-slate-900">
-                                        5 places
-                                    </div>
-                                </div>
+    <div class="mt-1 font-semibold text-slate-900">
+        ${availability}
+    </div>
+
+    <div class="mt-2 text-xs font-medium text-emerald-700">
+        ${program.status}
+    </div>
+</div>
                             </div>
                         </div>
 

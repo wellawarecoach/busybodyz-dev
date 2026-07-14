@@ -12,7 +12,22 @@ Avoid changing the property names such as:
 name, duration, tagline, description, suitableFor, outcomes
 =========================================================
 */
+window.groupProgramDefaults = {
+    sessionsPerWeek: "Two coached sessions per week",
 
+    location: "BusyBodyz studio",
+
+    maximumParticipants: "Maximum five participants",
+
+    cohortProgression:
+        "Cohort-based progression from start to finish",
+
+    missedSessionSummary:
+        "Make-up or recorded session option",
+
+    missedSessionSupport:
+        "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend."
+};
 window.groupPrograms = [
     {
         id: "make-life-feel-easier",
@@ -47,8 +62,11 @@ window.groupPrograms = [
 
         location: "BusyBodyz studio",
 
-        maximumParticipants: "Maximum five participants",
+        cohortProgression:
+            "Cohort-based progression from start to finish",
 
+        missedSessionSummary:
+            "Make-up or recorded session option",
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
@@ -56,7 +74,13 @@ window.groupPrograms = [
 
         bookingLink: "#group-coaching-contact",
 
-        status: "Upcoming cohort",
+        status: "Registration Open",
+        schedule: "To be announced",
+
+        availability: "5 places",
+
+
+        maximumParticipants: "Maximum 5 participants",
 
         featured: true
     },
@@ -96,6 +120,10 @@ window.groupPrograms = [
 
         maximumParticipants: "Maximum five participants",
 
+        cohortProgression:
+            "Cohort-based progression from start to finish",
+        missedSessionSummary:
+            "Make-up or recorded session option",
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
@@ -104,6 +132,10 @@ window.groupPrograms = [
         bookingLink: "#group-coaching-contact",
 
         status: "Upcoming cohort",
+
+        schedule: "To be announced",
+
+        availability: "5 places",
 
         featured: false
     },
@@ -142,7 +174,11 @@ window.groupPrograms = [
         location: "BusyBodyz studio",
 
         maximumParticipants: "Maximum five participants",
+        cohortProgression:
 
+            "Cohort-based progression from start to finish",
+        missedSessionSummary:
+            "Make-up or recorded session option",
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
@@ -151,6 +187,10 @@ window.groupPrograms = [
         bookingLink: "#group-coaching-contact",
 
         status: "Upcoming cohort",
+
+        schedule: "To be announced",
+
+        availability: "5 places",
 
         featured: false
     }
