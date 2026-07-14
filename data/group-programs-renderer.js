@@ -273,9 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ${availability}
     </div>
 
-    <div class="mt-2 text-xs font-medium text-emerald-700">
-        ${program.status}
-    </div>
+    <div class="mt-2 text-xs font-medium ${program.status.class}">
+    ${program.status.text}
+</div>
 </div>
                             </div>
                         </div>

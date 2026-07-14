@@ -74,7 +74,10 @@ window.groupPrograms = [
 
         bookingLink: "#group-coaching-contact",
 
-        status: "Registration Open",
+        status: {
+            text: "Registration Open",
+            class: "text-emerald-700"
+        },
         schedule: "To be announced",
 
         availability: "5 places",
