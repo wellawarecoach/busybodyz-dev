@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="BusyBodyz small group coaching programs in Ajax. Progressive 6–8 week in-studio programs with two coached sessions per week, a maximum of five participants, and flexible make-up options." />
+    <title>Small Group Coaching | BusyBodyz</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        .hero-background {
+            background-image:
+                linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.68) 48%, rgba(15, 23, 42, 0.28) 100%),
+                url("images/group-coaching-hero.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        @media (max-width: 767px) {
+            .hero-background {
+                background-image:
+                    linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.78)),
+                    url("images/group-coaching-hero.jpg");
+                background-position: 58% center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b border-slate-200/70 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between gap-3 py-3 sm:py-4">
+
+                <a href="index.html" class="flex items-center gap-3 min-w-0 shrink">
+                    <img src="images/logo.png" alt="BusyBodyz logo"
+                        class="h-10 w-10 sm:h-12 sm:w-12 object-contain shrink-0" />
+                    <div class="min-w-0">
+                        <div
+                            class="text-lg sm:text-xl font-semibold tracking-tight text-slate-900 leading-none truncate">
+                            BusyBodyz
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-neutral-500 mt-1 truncate">
+                            Performance Energy Coaching
+                        </div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 shrink-0">
+                    <nav class="flex items-center gap-8 text-sm text-slate-800">
+                        <a href="studio-coaching.html" class="hover:text-blue-900 transition">Studio</a>
+                        <a href="online-coaching.html" class="hover:text-blue-900 transition">Online</a>
+                        <a href="resets.html" class="hover:text-blue-900 transition">Resets</a>
+                        <a href="about.html" class="hover:text-blue-900 transition">About</a>
+                        <a href="index.html#contact" class="hover:text-blue-900 transition">Contact</a>
+                    </nav>
+
+                    <a href="#programs"
+                        class="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-700 transition whitespace-nowrap">
+                        View Programs
+                    </a>
+                </div>
+
+                <button id="mobileMenuButton"
+                    class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50 transition shrink-0"
+                    aria-label="Toggle menu" aria-expanded="false">
+                    <svg id="hamburgerIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 bg-black/50 hidden" aria-hidden="true"></div>
+
+    <div id="mobileMenuPanel"
+        class="fixed inset-x-0 top-[73px] bottom-0 z-50 bg-white px-5 pt-5 pb-8 overflow-y-auto hidden md:hidden">
+        <nav class="flex flex-col gap-1 text-base text-slate-800">
+            <a href="studio-coaching.html" class="py-3 border-b border-slate-200">Studio</a>
+            <a href="online-coaching.html" class="py-3 border-b border-slate-200">Online</a>
+            <a href="resets.html" class="py-3 border-b border-slate-200">Resets</a>
+            <a href="about.html" class="py-3 border-b border-slate-200">About</a>
+            <a href="index.html#contact" class="py-3 border-b border-slate-200">Contact</a>
+        </nav>
+
+        <a href="#programs"
+            class="mt-6 block w-full rounded-full bg-slate-900 px-6 py-3 text-center font-medium text-white">
+            View Current Programs
+        </a>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-background relative min-h-[650px] lg:min-h-[720px] flex items-center pt-24">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent"></div>
+
+            <div class="relative max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+                <div class="max-w-3xl">
+                    <p
+                        class="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs sm:text-sm font-medium text-white backdrop-blur">
+                        Small Group Coaching • Ajax Studio
+                    </p>
+
+                    <h1
+                        class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-white">
+                        Small group coaching that helps life feel easier.
+                    </h1>
+
+                    <p class="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-slate-100">
+                        Progressive 6–8 week programs that build strength, improve mobility, reduce tension, and restore
+                        usable energy—with individual attention in a group of no more than five.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#programs"
+                            class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-medium text-slate-900 hover:bg-slate-100 transition">
+                            View Current Programs
+                        </a>
+                        <a href="#how-it-works"
+                            class="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3.5 font-medium text-white hover:bg-white/20 transition backdrop-blur">
+                            See How It Works
+                        </a>
+                    </div>
+
+                    <div class="mt-10 grid sm:grid-cols-3 gap-3 max-w-2xl">
+                        <div class="rounded-2xl border border-white/20 bg-slate-950/30 p-4 backdrop-blur">
+                            <div class="text-sm font-semibold text-white">2 sessions weekly</div>
+                            <div class="mt-1 text-xs text-slate-200">Consistent, coached progression.</div>
+                        </div>
+                        <div class="rounded-2xl border border-white/20 bg-slate-950/30 p-4 backdrop-blur">
+                            <div class="text-sm font-semibold text-white">Maximum 5 people</div>
+                            <div class="mt-1 text-xs text-slate-200">You will not get lost in the room.</div>
+                        </div>
+                        <div class="rounded-2xl border border-white/20 bg-slate-950/30 p-4 backdrop-blur">
+                            <div class="text-sm font-semibold text-white">Flexible make-ups</div>
+                            <div class="mt-1 text-xs text-slate-200">In-studio or recorded option.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM SUMMARY STRIP -->
+        <section class="border-b border-slate-200 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 text-center">
+                    <div>
+                        <div class="font-semibold text-slate-900">6–8 Weeks</div>
+                        <div class="mt-1 text-sm text-slate-500">Structured start and finish</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-slate-900">2× Weekly</div>
+                        <div class="mt-1 text-sm text-slate-500">In-studio coaching</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Cohort Based</div>
+                        <div class="mt-1 text-sm text-slate-500">Begin and progress together</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-slate-900">Maximum 5</div>
+                        <div class="mt-1 text-sm text-slate-500">Individual attention</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFFERENCE -->
+        <section id="how-it-works" class="py-20 md:py-24 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900">The BusyBodyz Difference
+                    </p>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                        More than a class. A coached progression.
+                    </h2>
+                    <p class="mt-5 text-lg leading-relaxed text-slate-600">
+                        Each group begins together, trains twice each week, and progresses through a planned 6–8 week
+                        experience. The goal is not simply to complete workouts—it is to become more capable in real
+                        life.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                        <div class="text-sm font-semibold text-blue-900">01</div>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">Start together</h3>
+                        <p class="mt-3 text-slate-600">
+                            Everyone joins at Week 1, creating shared momentum, accountability, and a clear finish line.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                        <div class="text-sm font-semibold text-blue-900">02</div>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">Progress twice weekly</h3>
+                        <p class="mt-3 text-slate-600">
+                            Two coached in-studio sessions each week allow skills, strength, and confidence to build
+                            steadily.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                        <div class="text-sm font-semibold text-blue-900">03</div>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">Receive personal guidance</h3>
+                        <p class="mt-3 text-slate-600">
+                            With only five participants, exercises can be coached and adjusted to individual needs.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                        <div class="text-sm font-semibold text-blue-900">04</div>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">Stay on track when life happens</h3>
+                        <p class="mt-3 text-slate-600">
+                            Miss a regular session and use an available in-studio make-up class or the recorded online
+                            session.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                        <div class="text-sm font-semibold text-blue-900">05</div>
+                        <h3 class="mt-3 text-xl font-semibold text-slate-900">Train for real life</h3>
+                        <p class="mt-3 text-slate-600">
+                            Programs focus on useful strength, mobility, endurance, recovery, and everyday movement
+                            capacity.
+                        </p>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-slate-900 p-7 shadow-sm text-white">
+                        <div class="text-sm font-semibold text-slate-300">Built-in flexibility</div>
+                        <h3 class="mt-3 text-xl font-semibold">Structure without rigidity</h3>
+                        <p class="mt-3 text-slate-300">
+                            The program stays consistent while giving participants practical ways to recover a missed
+                            session.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENT PROGRAMS -->
+        <section id="programs" class="py-20 md:py-24 bg-white border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                    <div class="max-w-3xl">
+                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900">Current Programs</p>
+                        <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                            Choose the outcome you want to work toward.
+                        </h2>
+                        <p class="mt-5 text-lg text-slate-600">
+                            Program dates, pricing, and Wix enrollment links will be added once the first cohorts are
+                            scheduled.
+                        </p>
+                    </div>
+
+                    <a href="mailto:hello@busybodyz.fit?subject=Small%20Group%20Coaching%20Programs"
+                        class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50 transition">
+                        Ask About Upcoming Dates
+                    </a>
+                </div>
+
+                <div id="group-programs-container" class="mt-12 grid lg:grid-cols-3 gap-7">
+                    <noscript>
+                        <p class="text-slate-600">
+                            JavaScript must be enabled to view the current programs.
+                        </p>
+                    </noscript>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATTENDANCE FLEXIBILITY -->
+        <section class="py-20 md:py-24 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900">When Life Interrupts
+                        </p>
+                        <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+                            Missing one session does not mean losing your progress.
+                        </h2>
+                        <p class="mt-5 text-lg leading-relaxed text-slate-600">
+                            Your regular cohort remains your primary schedule. When you cannot attend, you will have a
+                            practical path to stay connected to the program.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <div class="font-semibold text-slate-900">Option 1: In-studio make-up</div>
+                            <p class="mt-2 text-slate-600">
+                                Attend one of the available weekly make-up sessions, subject to space and program
+                                compatibility.
+                            </p>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <div class="font-semibold text-slate-900">Option 2: Recorded online session</div>
+                            <p class="mt-2 text-slate-600">
+                                Complete a recorded version from home when an in-studio make-up is not practical.
+                            </p>
+                        </div>
+
+                        <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                            <div class="font-semibold text-blue-950">The purpose is continuity.</div>
+                            <p class="mt-2 text-blue-900">
+                                Flexibility supports the structure—it does not replace the value of attending with your
+                                group.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-20 md:py-24 bg-white border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="rounded-3xl bg-slate-900 p-8 sm:p-10 md:p-14 text-center text-white">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">Small Group Coaching</p>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
+                        Be among the first to hear when enrollment opens.
+                    </h2>
+                    <p class="mt-5 max-w-2xl mx-auto text-lg text-slate-300">
+                        Upcoming dates, session times, pricing, and enrollment links will be announced before each new
+                        cohort begins.
+                    </p>
+
+                    <a href="mailto:helllo@busybodyz.fit?subject=Small%20Group%20Coaching%20Waitlist"
+                        class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-medium text-slate-900 hover:bg-slate-100 transition">
+                        Join the Interest List
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-10 text-sm text-neutral-500 border-t border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <div class="font-semibold text-slate-900">BusyBodyz</div>
+                    <div class="mt-1">Energy & Performance Solutions</div>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-4">
+                    <a href="studio-coaching.html" class="hover:text-slate-900 transition">Studio</a>
+                    <a href="online-coaching.html" class="hover:text-slate-900 transition">Online</a>
+                    <a href="resets.html" class="hover:text-slate-900 transition">Resets</a>
+                    <a href="about.html" class="hover:text-slate-900 transition">About</a>
+                </nav>
+
+                <div>© 2026 BusyBodyz. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenuPanel = document.getElementById("mobileMenuPanel");
+        const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
+        const hamburgerIcon = document.getElementById("hamburgerIcon");
+        const closeIcon = document.getElementById("closeIcon");
+
+        function toggleMobileMenu() {
+            const isOpen = !mobileMenuPanel.classList.contains("hidden");
+
+            mobileMenuPanel.classList.toggle("hidden");
+            mobileMenuBackdrop.classList.toggle("hidden");
+            hamburgerIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+            document.body.classList.toggle("menu-open");
+            mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+        }
+
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        mobileMenuBackdrop.addEventListener("click", toggleMobileMenu);
+
+        mobileMenuPanel.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                if (!mobileMenuPanel.classList.contains("hidden")) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    </script>
+    <script src="data/group-programs.js"></script>
+    <script src="data/group-programs-renderer.js"></script>
+
+</body>
+
+</html>
