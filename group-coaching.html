@@ -361,66 +361,81 @@
                         Group Coaching Inquiry
                     </h3>
 
-                    <form id="group-coaching-inquiry-form" class="mt-6">
+                    <form id="group-coaching-inquiry-form" action="https://formspree.io/f/xeeyajwb" method="POST"
+                        class="mt-6">
+                        <div id="inquiry-form-fields">
+                            <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                                <p class="text-sm text-slate-500">
+                                    Program you're interested in
+                                </p>
 
-                        <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-                            <p class="text-sm text-slate-500">
-                                Program you're interested in
-                            </p>
+                                <p id="selected-program-display" class="mt-1 font-medium text-slate-900">
+                                    No program selected
+                                </p>
+                            </div>
+                            <div>
+                                <label for="inquiry-name" class="block text-sm font-medium text-slate-900">
+                                    Name
+                                </label>
 
-                            <p id="selected-program-display" class="mt-1 font-medium text-slate-900">
-                                No program selected
-                            </p>
-                        </div>
-                        <div>
-                            <label for="inquiry-name" class="block text-sm font-medium text-slate-900">
-                                Name
-                            </label>
+                                <input type="text" id="inquiry-name" name="name" autocomplete="name"
+                                    class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
+                            </div>
+                            <div class="mt-6">
+                                <label for="inquiry-email" class="block text-sm font-medium text-slate-900">
+                                    Email
+                                </label>
 
-                            <input type="text" id="inquiry-name" name="name" autocomplete="name"
-                                class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
-                        </div>
-                        <div class="mt-6">
-                            <label for="inquiry-email" class="block text-sm font-medium text-slate-900">
-                                Email
-                            </label>
+                                <input type="email" id="inquiry-email" name="email" autocomplete="email" required
+                                    class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
+                            </div>
+                            <div class="mt-6">
+                                <label for="inquiry-phone" class="block text-sm font-medium text-slate-900">
+                                    Phone <span class="font-normal text-slate-500">(optional)</span>
+                                </label>
 
-                            <input type="email" id="inquiry-email" name="email" autocomplete="email" required
-                                class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
-                        </div>
-                        <div class="mt-6">
-                            <label for="inquiry-phone" class="block text-sm font-medium text-slate-900">
-                                Phone <span class="font-normal text-slate-500">(optional)</span>
-                            </label>
+                                <input type="tel" id="inquiry-phone" name="phone" autocomplete="tel"
+                                    class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
+                            </div>
+                            <div class="mt-6">
+                                <label for="inquiry-message" class="block text-sm font-medium text-slate-900">
+                                    Questions or comments
+                                </label>
 
-                            <input type="tel" id="inquiry-phone" name="phone" autocomplete="tel"
-                                class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200">
-                        </div>
-                        <div class="mt-6">
-                            <label for="inquiry-message" class="block text-sm font-medium text-slate-900">
-                                Questions or comments
-                            </label>
+                                <textarea id="inquiry-message" name="message" rows="5"
+                                    placeholder="Tell us anything you'd like us to know about your goals, experience, availability, or questions."
+                                    class="mt-2 w-full resize-y rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"></textarea>
+                            </div>
+                            <div class="mt-6">
+                                <label class="flex items-start gap-3">
+                                    <input type="checkbox" id="inquiry-consent" name="consent" required
+                                        class="mt-1 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-400">
 
-                            <textarea id="inquiry-message" name="message" rows="5"
-                                placeholder="Tell us anything you'd like us to know about your goals, experience, availability, or questions."
-                                class="mt-2 w-full resize-y rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"></textarea>
-                        </div>
-                        <div class="mt-6">
-                            <label class="flex items-start gap-3">
-                                <input type="checkbox" id="inquiry-consent" name="consent" required
-                                    class="mt-1 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-400">
+                                    <span class="text-sm text-slate-600 leading-relaxed">
+                                        I consent to BusyBodyz contacting me regarding this program inquiry.
+                                        My information will only be used to respond to my inquiry and will
+                                        not be shared with third parties.
+                                    </span>
+                                </label>
+                            </div>
+                            <button type="submit" id="inquiry-submit-button"
+                                class="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-slate-900 px-6 py-3.5 font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-70">
+                                <svg id="inquiry-submit-spinner" class="hidden h-5 w-5 animate-spin"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
 
-                                <span class="text-sm text-slate-600 leading-relaxed">
-                                    I consent to BusyBodyz contacting me regarding this program inquiry.
-                                    My information will only be used to respond to my inquiry and will
-                                    not be shared with third parties.
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                    </path>
+                                </svg>
+
+                                <span id="inquiry-submit-text">
+                                    Submit Inquiry
                                 </span>
-                            </label>
+                            </button>
                         </div>
-                        <button type="submit"
-                            class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3.5 font-medium text-white transition hover:bg-slate-700">
-                            Submit Inquiry
-                        </button>
                         <div id="inquiry-success-message"
                             class="mt-6 hidden rounded-2xl border border-emerald-200 bg-emerald-50 p-5" role="status"
                             aria-live="polite">
@@ -438,6 +453,16 @@
                             <p class="mt-2 text-sm leading-relaxed text-emerald-800">
                                 BusyBodyz will contact you with upcoming dates, session times, pricing, and enrollment
                                 details.
+                            </p>
+                        </div>
+                        <div id="inquiry-error-message"
+                            class="mt-6 hidden rounded-2xl border border-red-200 bg-red-50 p-5" role="alert">
+                            <h4 class="font-semibold text-red-900">
+                                Your inquiry could not be sent.
+                            </h4>
+
+                            <p class="mt-2 text-sm text-red-800">
+                                Please check your connection and try again.
                             </p>
                         </div>
                         <input type="hidden" id="selected-program" name="program" value="">
