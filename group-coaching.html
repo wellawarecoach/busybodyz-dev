@@ -421,6 +421,25 @@
                             class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3.5 font-medium text-white transition hover:bg-slate-700">
                             Submit Inquiry
                         </button>
+                        <div id="inquiry-success-message"
+                            class="mt-6 hidden rounded-2xl border border-emerald-200 bg-emerald-50 p-5" role="status"
+                            aria-live="polite">
+                            <h4 class="text-lg font-semibold text-emerald-900">
+                                Thank you for your inquiry!
+                            </h4>
+
+                            <p class="mt-2 text-emerald-800">
+                                We’ve received your interest in
+                                <span id="inquiry-success-program" class="font-semibold">
+                                    this program
+                                </span>.
+                            </p>
+
+                            <p class="mt-2 text-sm leading-relaxed text-emerald-800">
+                                BusyBodyz will contact you with upcoming dates, session times, pricing, and enrollment
+                                details.
+                            </p>
+                        </div>
                         <input type="hidden" id="selected-program" name="program" value="">
 
                     </form>
