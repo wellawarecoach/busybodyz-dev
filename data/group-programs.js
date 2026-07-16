@@ -70,10 +70,9 @@ window.groupPrograms = [
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
-        callToAction: "Ask About This Program",
+        callToAction: "I'm interested.",
 
-        bookingLink: "#group-coaching-contact",
-
+        bookingLink: "#group-coaching-inquiry",
         status: {
             text: "Registration Open",
             class: "text-emerald-700"
@@ -83,9 +82,11 @@ window.groupPrograms = [
         availability: "5 places",
 
 
-        maximumParticipants: "Maximum 5 participants",
+        maximumParticipants: "5 participants",
 
-        featured: true
+        featured: true,
+
+        featuredLabel: "Featured Program"
     },
 
     {
@@ -130,9 +131,9 @@ window.groupPrograms = [
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
-        callToAction: "Ask About This Program",
+        callToAction: "I'm interested.",
 
-        bookingLink: "#group-coaching-contact",
+        bookingLink: "#group-coaching-inquiry",
 
         status: "Upcoming cohort",
 
@@ -185,9 +186,9 @@ window.groupPrograms = [
         missedSessionSupport:
             "Optional in-studio make-up sessions may be available when space permits. A recorded online session is also provided when a participant cannot attend.",
 
-        callToAction: "Ask About This Program",
+        callToAction: "I'm interested.",
 
-        bookingLink: "#group-coaching-contact",
+        bookingLink: "#group-coaching-inquiry",
 
         status: "Upcoming cohort",
 

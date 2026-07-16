@@ -79,8 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             program.callToAction || "Ask About This Program";
 
         const status =
-            program.status || "Dates coming soon";
-
+            program.status?.text || "Dates coming soon";
         const schedule =
             program.schedule || "To be announced";
         const availability =
@@ -104,8 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
                             ${status}
                         </span>
                     </div>
-
-                    <h3 class="mt-6 text-2xl font-semibold text-slate-900">
+${program.featured
+                ? `
+        <div class="mt-6">
+            <span class="inline-flex rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">
+                ${program.featuredLabel || "Featured Program"}
+            </span>
+        </div>
+    `
+                : ""
+            }
+                    <h3 class="mt-4 text-2xl font-semibold text-slate-900">
                         ${program.name}
                     </h3>
 
@@ -264,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                 </div>
 
-                               <div>
+                             <div>
     <div class="text-slate-500">
         Availability
     </div>
@@ -273,15 +281,20 @@ document.addEventListener("DOMContentLoaded", () => {
         ${availability}
     </div>
 
-    <div class="mt-2 text-xs font-medium ${program.status.class}">
-    ${program.status.text}
-</div>
+    <div class="mt-3 text-slate-500">
+        Maximum Participants
+    </div>
+
+    <div class="mt-1 font-semibold text-slate-900">
+        ${program.maximumParticipants}
+    </div>
 </div>
                             </div>
                         </div>
 
                         <a
                             href="${bookingLink}"
+                            data-program="${program.name}"
                             class="mt-8 inline-flex w-full items-center justify-center rounded-full ${style.button} px-6 py-3.5 font-medium text-white transition"
                         >
                             ${buttonText}
@@ -295,4 +308,29 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = window.groupPrograms
         .map(createProgramCard)
         .join("");
+    container.innerHTML = window.groupPrograms
+        .map(createProgramCard)
+        .join("");
+
+    // Connect program buttons to the inquiry form
+    const programButtons = container.querySelectorAll("[data-program]");
+
+    const hiddenProgram =
+        document.getElementById("selected-program");
+
+    const programDisplay =
+        document.getElementById("selected-program-display");
+
+    programButtons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            const program =
+                button.dataset.program;
+
+            hiddenProgram.value = program;
+
+            programDisplay.textContent = program;
+
+        });
+    });
 });
