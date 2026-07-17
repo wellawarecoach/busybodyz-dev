@@ -305,32 +305,55 @@ ${program.featured
         `;
     }
 
-    container.innerHTML = window.groupPrograms
-        .map(createProgramCard)
-        .join("");
+
     container.innerHTML = window.groupPrograms
         .map(createProgramCard)
         .join("");
 
     // Connect program buttons to the inquiry form
-    const programButtons = container.querySelectorAll("[data-program]");
+    const programButtons = container.querySelectorAll(
+        "[data-program]"
+    );
 
-    const hiddenProgram =
-        document.getElementById("selected-program");
+    const hiddenProgram = document.getElementById(
+        "selected-program"
+    );
 
-    const programDisplay =
-        document.getElementById("selected-program-display");
+    const programDisplay = document.getElementById(
+        "selected-program-display"
+    );
+
+    const formFields = document.getElementById(
+        "inquiry-form-fields"
+    );
+
+    const successMessage = document.getElementById(
+        "inquiry-success-message"
+    );
+
+    const errorMessage = document.getElementById(
+        "inquiry-error-message"
+    );
 
     programButtons.forEach(button => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", event => {
+            event.preventDefault();
 
-            const program =
-                button.dataset.program;
+            const program = button.dataset.program;
 
             hiddenProgram.value = program;
-
             programDisplay.textContent = program;
 
+            formFields.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+            errorMessage.classList.add("hidden");
+
+            document
+                .getElementById("group-coaching-inquiry")
+                .scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
         });
     });
 });
