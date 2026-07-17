@@ -120,7 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
             `BBZ-${datePart}-${randomPart}`;
         successMessage.classList.add("hidden");
         errorMessage.classList.add("hidden");
+        const programName =
+            selectedProgram.value || "this program";
 
+        const subjectField = inquiryForm.querySelector(
+            'input[name="_subject"]'
+        );
+
+        if (subjectField) {
+            subjectField.value =
+                `New BusyBodyz Inquiry: ${programName}`;
+        }
         setSubmitting(true);
 
         const minimumDelay = wait(750);
@@ -143,8 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error("Form submission failed.");
             }
 
-            const programName =
-                selectedProgram.value || "this program";
             const subjectField = inquiryForm.querySelector(
                 'input[name="_subject"]'
             );
