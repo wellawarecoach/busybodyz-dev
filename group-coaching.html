@@ -454,6 +454,10 @@
                                 BusyBodyz will contact you with upcoming dates, session times, pricing, and enrollment
                                 details.
                             </p>
+                            <button type="button" id="submit-another-inquiry"
+                                class="mt-5 inline-flex items-center justify-center rounded-full border border-emerald-300 bg-white px-5 py-2.5 text-sm font-medium text-emerald-900 transition hover:bg-emerald-100">
+                                Submit Another Inquiry
+                            </button>
                         </div>
                         <div id="inquiry-error-message"
                             class="mt-6 hidden rounded-2xl border border-red-200 bg-red-50 p-5" role="alert">
@@ -466,7 +470,17 @@
                             </p>
                         </div>
                         <input type="hidden" id="selected-program" name="program" value="">
+                        <input type="hidden" name="_subject" value="New BusyBodyz Group Coaching Inquiry">
+                        <input type="hidden" id="page-url" name="page_url">
+                        <input type="hidden" id="submission-time" name="submission_time">
+                        <input type="hidden" id="inquiry-id" name="inquiry_id">
+                        <div aria-hidden="true" style="position: absolute; left: -9999px;">
+                            <label for="website-check">
+                                Leave this field empty
+                            </label>
 
+                            <input type="text" id="website-check" name="_gotcha" tabindex="-1" autocomplete="off">
+                        </div>
                     </form>
                 </div>
 
