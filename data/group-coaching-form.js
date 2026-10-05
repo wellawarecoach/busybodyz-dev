@@ -162,7 +162,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     `New BusyBodyz Inquiry: ${programName}`;
             }
             successProgram.textContent = programName;
-
+            // Track only after Formspree confirms a successful submission.
+            try {
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "conversion", {
+                        send_to: "AW-18481147735/JRdCCMCtwZIdENfev-xE"
+                    });
+                }
+            } catch (trackingError) {
+                console.warn("Google Ads tracking failed:", trackingError);
+            }
             formFields.classList.add("hidden");
             successMessage.classList.remove("hidden");
 
